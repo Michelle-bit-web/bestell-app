@@ -1,6 +1,6 @@
 header,
 footer{
-    background-color: grey;
+    background-color: rgb(98, 98, 98);
     display: flex;
     justify-content: center;
 }
