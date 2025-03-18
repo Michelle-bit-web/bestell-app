@@ -1,3 +1,7 @@
+.hover:hover{
+    cursor: pointer;
+}
+
 .div_choose_btn{
     display: flex;
     width: fit-content;
@@ -17,4 +21,19 @@
     border-radius: 0 0 0 10px;
     background-color: transparent;
     border: 0;
+}
+
+.div_trash{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.trash_icon{
+    width:90%;
+}
+
+.trash_btn{
+    background-color: transparent;
+    width: 15%;
+    border-radius: 100%;
 }

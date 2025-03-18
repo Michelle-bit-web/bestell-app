@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./style/standard.css">
     <link rel="stylesheet" href="./style/assets.css">
     <link rel="stylesheet" href="./style/basket.css">
+    <link rel="stylesheet" href="./style/fonts.css">
     <script src="./script/db.js"></script>
     <script src="./script/template.js"></script>
     <script src="./script.js"></script>
@@ -18,10 +19,18 @@
     <header>
         <div class="header_content">
             <img class="logo" src="./assets/logo/Bestell App- Logo.svg" alt="">
-            <div class="side_links">
-                <a href="#">Hauptgericht</a>
-                <a href="#">Beilagen</a>
-            </div>
+            <nav>
+                <div id="navbar" class="side_links d_none">
+                    <a href="#">Hauptgericht</a>
+                    <a href="#">Beilagen</a>
+                    <a href="#">Getränke</a>
+                </div>
+                <div id="burger_menu" class="burger_menu" onclick="triggerNavbar()">
+                    <div class="burger_menu_icon"></div>
+                    <div class="burger_menu_icon"></div>
+                    <div class="burger_menu_icon"></div>
+                  </div>
+            </nav>
         </div>
     </header>
     <section class="content_wrapper">
@@ -33,16 +42,37 @@
             <div>
                 <div>Sternebewertung</div>
                 <div class="div_choose_btn">
-                    <button id="delivery_btn" class="choosed_btn">Lieferung</button>
-                    <button id="pickup_btn" class="not_choosed_btn">Abholung</button>
+                    <button id="delivery_btn" class="choosed_btn hover" onclick="deliveryOrPickup(-1, event)">Lieferung</button>
+                    <button id="pickup_btn" class="not_choosed_btn hover" onclick="deliveryOrPickup(1, event)">Abholung</button>
                 </div>
+            </div>
+            <div id="main_dishes">
+                <h2>Hauptgerichte</h2>
+            </div>
+            <div id="side_dishes">
+                <h2>Beilagen</h2>
+            </div>
+            <div  id="drinks">
+                <h2>Getränke</h2>
             </div>
         </div>
         <div id="div_basket" class="div_basket">
             <h3>Warenkorb</h3>
+            <div class="div_trash">
+                <button class="trash_btn hover" onclick="deleteBasket()">
+                    <img class="trash_icon hover" src="./assets/favicon/trash.png" alt="trash-button">
+                </button>
+            </div>
+            <div id="div_basket_content"></div>
         </div>
         <div id="div_basket_overlay" class="div_basket_overlay d_none">
             <h3>Warenkorb</h3>
+            <div class="div_trash">
+                <button class="trash_btn hover" onclick="deleteBasket()">
+                    <img class="trash_icon hover" src="./assets/favicon/trash.png" alt="trash-button">
+                </button>
+            </div>
+            <div id="div_basket_content"></div>
         </div>
     </section>
     <footer>

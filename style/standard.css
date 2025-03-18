@@ -1,13 +1,16 @@
-body{
-    margin: 0;
+body {
+  margin: 0;
+  font-family: "sour-gummy-v1-latin-100";
+  font-weight: 300;
+  scroll-behavior: smooth;
 }
 
-a{
-    text-decoration: none;
-    color: white;
+a {
+  text-decoration: none;
+  color: white;
 }
 
-a:hover{
-    cursor: pointer;
-   color: greenyellow;
+a:hover {
+  cursor: pointer;
+  color: greenyellow;
 }

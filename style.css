@@ -20,18 +20,49 @@ footer{
     width: 15%;
 }
 
+nav{
+    display: flex;
+    gap: 8px;
+}
+
+/* #navbar{
+    transition: all 1s ease-in-out;
+} */
+
+.burger_menu{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.burger_menu_icon{
+    width: 32px;
+    height: 2px;
+    background-color: black;
+}
+
 .content_wrapper{
     display: flex;
     justify-content: center;
+    padding: 16px 0;
 }
 /* height ggf bei div-content und dic-basket rausnehmen */
 .div_content{
     background-color: bisque;
     width: calc(100% - 300px);
     max-width: calc(1920px - 300px);
+    padding: 8px 24px;
 }
 
 .div_single_dish{
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+
+.div_single_dish:hover{
+    background-color: rgba(172, 255, 47, 0.529);
+    margin-right: 100px;
+    transition: margin-right 1s;
+    border-radius: 10px;
 }

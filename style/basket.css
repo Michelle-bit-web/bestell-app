@@ -1,6 +1,7 @@
 .div_basket{
     background-color: aquamarine;
     width: 300px;
+    padding: 8px 24px;
 }
 
 .div_basket_overlay{
@@ -11,6 +12,11 @@
     height: 100%;
     width: 100%;
     max-width: 1920px;
+}
+
+.div_plus_minus{
+    display: flex;
+    align-items: center;
 }
 
 .d_none{
