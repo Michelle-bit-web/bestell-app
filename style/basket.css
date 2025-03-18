@@ -1,0 +1,18 @@
+.div_basket{
+    background-color: aquamarine;
+    width: 300px;
+}
+
+.div_basket_overlay{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(128, 128, 128, 0.584);
+    height: 100%;
+    width: 100%;
+    max-width: 1920px;
+}
+
+.d_none{
+    display: none;
+}

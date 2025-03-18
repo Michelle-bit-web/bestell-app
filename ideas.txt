@@ -1,0 +1,38 @@
+Homepage
+Hero Section: A full-width banner with high-quality food images, a search bar ("Enter your location"), and a CTA button ("Order Now").
+
+Navigation Bar: Logo on the left, links to "Home," "Menu," "Restaurants," "Deals," "Cart," and "Sign In" on the right.
+
+Popular Restaurants/Food Categories: Display featured restaurants and food categories in a grid layout.
+
+Deals & Discounts: Highlight special promotions with eye-catching banners.
+
+How It Works: A simple 3-step process (Browse, Order, Enjoy).
+
+Customer Reviews: Testimonials with star ratings.
+
+
+Search & Menu Pages
+Restaurant Listings: A list of restaurants with images, cuisine type, ratings, delivery time, and pricing.
+
+Filters & Sorting: Options for sorting by price, popularity, ratings, and cuisine.
+
+Restaurant Menu: A clean layout with food images, descriptions, pricing, and an "Add to Cart" button.
+
+
+Cart & Checkout
+Cart Summary: Displays selected items, quantities, and total cost.
+
+Delivery Details: Address input with map integration.
+
+Payment Options: Card, PayPal, Apple Pay, or Cash on Delivery.
+
+Order Confirmation: A summary page with estimated delivery time and tracking details.
+
+
+User Dashboard
+Order History: Track past orders and reorder quickly.
+
+Saved Restaurants: Favorite places for easy access.
+
+Profile & Settings: Manage addresses, payment options, and preferences.

@@ -1,0 +1,20 @@
+.div_choose_btn{
+    display: flex;
+    width: fit-content;
+    background-color: rgb(171, 171, 171);
+    border-radius: 10px;
+}
+
+.choosed_btn{
+    border-radius: 0 10px 10px 0;
+    background-color: black;
+    box-shadow:3px 0px rgba(0, 0, 0, 0.348);
+    color: white;
+    border: 0;
+}
+
+.not_choosed_btn{
+    border-radius: 0 0 0 10px;
+    background-color: transparent;
+    border: 0;
+}

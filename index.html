@@ -4,9 +4,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style/standard.css">
+    <link rel="stylesheet" href="./style/assets.css">
+    <link rel="stylesheet" href="./style/basket.css">
     <title>Bestell App</title>
 </head>
 <body>
-    
+    <header>
+        <div class="header_content">
+            <img class="logo" src="./assets/logo/Bestell App- Logo.svg" alt="">
+            <div class="side_links">
+                <a href="#">Hauptgericht</a>
+                <a href="#">Beilagen</a>
+            </div>
+        </div>
+    </header>
+    <section class="content_wrapper">
+        <div id="div_content" class="div_content">
+            <div>Backgroundimage zum Restaurant
+                <div>Bild/Logo Restaurant</div>
+            </div>
+            <h1>Restaurant-Titel</h1>
+            <div>
+                <div>Sternebewertung</div>
+                <div class="div_choose_btn">
+                    <button id="delivery_btn" class="choosed_btn">Lieferung</button>
+                    <button id="pickup_btn" class="not_choosed_btn">Abholung</button>
+                </div>
+            </div>
+        </div>
+        <div id="div_basket" class="div_basket">
+            <h3>Warenkorb</h3>
+        </div>
+        <div id="div_basket_overlay" class="div_basket_overlay d_none">
+            <h3>Warenkorb</h3>
+        </div>
+    </section>
+    <footer>
+        <div class="footer_content">
+            <img class="logo" src="./assets/logo/Bestell App- Logo.svg" alt="">
+            <div class="side_links">
+                <a href="#">AGB</a>
+                <a href="#">Impressum</a>
+                <a href="#">Datenschutz</a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
