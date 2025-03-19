@@ -30,6 +30,20 @@ function changeAmount(a, i){
 }
 
 function deliveryOrPickup(a, event){
-    event.target.classList.toggle('choosed_btn');
-    event.target.classList.toggle('not_choosed_btn');
+    if(a < 0){
+        document.getElementById('delivery_btn').classList.add('not_choosed_btn');
+        document.getElementById('pickup_btn').classList.add('choosed_btn');
+        document.getElementById('pickup_btn').classList.remove('not_choosed_btn');
+    } else if(a > 0){
+        document.getElementById('pickup_btn').classList.add('not_choosed_btn');
+        document.getElementById('delivery_btn').classList.add('choosed_btn');
+        document.getElementById('delivery_btn').classList.remove('not_choosed_btn');
+    };
+    // event.target.classList.toogle('not_choosed_btn');
+    // event.target.classList.remove('not_choosed_btn');
 }
+
+// secondTitle = lang == "de" ? "Webseite":"Website";
+//     document.getElementById('title-two').innerHTML = secondTitle;
+// }
+

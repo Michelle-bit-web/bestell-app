@@ -1,11 +1,11 @@
 .div_basket{
     background-color:rgba(25, 42, 25, 0.818);
-    height: 800px;
+    height: 1000px;
     width: 300px;
     padding: 8px 24px;
     overflow-x: scroll;
     position: sticky;
-    top:0;
+    top:80px;
 }
 
 .div_basket_overlay{

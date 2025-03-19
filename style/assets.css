@@ -1,3 +1,11 @@
+button{
+    background-color: rgb(24, 37, 15);
+    border: 2px solid  rgb(172, 255, 47);
+    width: 5%;
+    border-radius: 10px;
+    color:  rgb(172, 255, 47);
+}
+
 .hover:hover{
     cursor: pointer;
 }
@@ -5,22 +13,26 @@
 .div_choose_btn{
     display: flex;
     width: fit-content;
-    background-color: rgb(171, 171, 171);
+    background-color: rgb(154, 152, 152);
     border-radius: 10px;
 }
 
 .choosed_btn{
-    border-radius: 0 10px 10px 0;
-    background-color: black;
+    width: 200px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: rgb(172, 255, 47);
     box-shadow:3px 0px rgba(0, 0, 0, 0.348);
-    color: white;
+    color: rgb(0, 0, 0);
     border: 0;
 }
 
 .not_choosed_btn{
-    border-radius: 0 0 0 10px;
+    width: 150px;
+    border-radius: 10px;
     background-color: transparent;
     border: 0;
+    color: rgb(43, 43, 43);
 }
 
 .div_trash{
@@ -33,12 +45,12 @@
 }
 
 .trash_btn{
-    background-color: rgba(172, 255, 47, 0.529);
+    background-color: rgb(172, 255, 47);
     border: 5px;
     width: 15%;
     border-radius: 100%;
 }
 
 .trash_btn:hover{
-    background-color: rgba(106, 157, 29, 0.529);
+    background-color: rgb(53, 80, 33);
 }

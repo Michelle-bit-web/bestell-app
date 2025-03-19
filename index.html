@@ -18,12 +18,12 @@
   <body onload="renderContent()">
     <header>
       <div class="header_content">
-        <img class="logo" src="./assets/logo/Bestell App- Logo.svg" alt="" />
+        <img id="top-logo" class="logo" src="./assets/logo/Bestell App- Logo.svg" alt="" />
         <nav>
           <div id="navbar" class="side_links d_none">
-            <a href="#">Hauptgericht</a>
-            <a href="#">Beilagen</a>
-            <a href="#">Getränke</a>
+            <a href="#main_dish_title">Hauptgericht</a>
+            <a href="#side_dish_title">Beilagen</a>
+            <a href="#drinks_title">Getränke</a>
           </div>
           <div id="burger_menu" class="burger_menu" onclick="triggerNavbar()">
             <div class="burger_menu_icon"></div>
@@ -37,26 +37,25 @@
       <div id="div_content" class="div_content">
         <div>
           <div class="div_restaurant">
-            <img class="restaurant_logo" src="./assets/favicon/favicon-32x32.png" alt="" />
-            Bild/Logo Restaurant
+            <img class="restaurant_logo" src="./assets/logo/restaurant-logo.png" alt="" />
           </div>
-          <h1>Restaurant-Titel</h1>
+          <h1>Green Fire</h1>
         </div>
         <div>
           <div>Sternebewertung</div>
           <div class="div_choose_btn">
-            <button id="delivery_btn" class="choosed_btn hover" onclick="deliveryOrPickup(-1, event)">Lieferung</button>
-            <button id="pickup_btn" class="not_choosed_btn hover" onclick="deliveryOrPickup(1, event)">Abholung</button>
+            <button id="delivery_btn" class="choosed_btn hover" onclick="deliveryOrPickup(1, event)">Lieferung</button>
+            <button id="pickup_btn" class="not_choosed_btn hover" onclick="deliveryOrPickup(-1, event)">Abholung</button>
           </div>
         </div>
         <div id="main_dishes">
-          <h2>Hauptgerichte</h2>
+          <h2 id="main_dish_title">Hauptgerichte</h2>
         </div>
         <div id="side_dishes">
-          <h2>Beilagen</h2>
+          <h2 id="side_dish_title">Beilagen</h2>
         </div>
         <div id="drinks">
-          <h2>Getränke</h2>
+          <h2 id="drinks_title">Getränke</h2>
         </div>
       </div>
       <div id="div_basket" class="div_basket">
@@ -82,11 +81,11 @@
     </section>
     <footer>
       <div class="footer_content">
-        <img class="logo" src="./assets/logo/bestellapp-logo.PNG" alt="" />
+        <a class="footer_logo_link" href="#top-logo"><img class="footer_logo" src="./assets/logo/bestellapp-logo.PNG" alt="" /></a>
         <div class="side_links">
-          <a href="#">AGB</a>
-          <a href="#">Impressum</a>
-          <a href="#">Datenschutz</a>
+          <a href="#" target="_blank">AGB</a>
+          <a href="#" target="_blank">Impressum</a>
+          <a href="#" target="_blank">Datenschutz</a>
         </div>
       </div>
     </footer>
