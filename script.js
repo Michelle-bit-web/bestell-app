@@ -81,11 +81,15 @@ function order(){
     document.getElementById('div_basket_price_content').innerHTML = "";
 }
 
-function closeAlert(){
-    document.getElementById('ordered_alert').classList.add('d_none');
+function closeWindow(a, event){
+    if(a == 'basket'){
+        document.getElementById('div_basket_overlay').classList.add('d_none');
+    }else if(a == 'alert'){
+            document.getElementById('ordered_alert').classList.add('d_none');}
+    event.stopPropagation();
 }
 
-function openOverlay(){
+function openOverlay(event){
     document.getElementById('div_basket_overlay').classList.toggle('d_none');
     event.stopPropagation();
 }

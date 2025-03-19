@@ -71,28 +71,31 @@
           <div id="div_basket_price_content"></div>
         </div>
       </div>
-      <div id="div_basket_overlay" class="div_basket_overlay">
-        <h3>Warenkorb</h3>
-        <div class="div_trash">
-          <button class="trash_btn hover" onclick="deleteBasket()">
-            <img class="trash_icon hover" src="./assets/favicon/trash.png" alt="trash-button" />
-          </button>
-        </div>
-        <div id="div_basket_content"></div>
-      </div>
     </section>
-    <div id="basket_mobile" class="basket_mobile">
-        <button id="basket_btn_mobile" class="basket_btn_mobile hover" onclick="openOverlay(event)">
-            <p>Warenkorb</p>
-            <br><i><p>Gesamtpreis</p></i>
-        </button>
-      </div>
+    <div class="sticky_basket_mobile">
+        <div id="div_basket_overlay" class="div_basket_overlay d_none">
+            <h3>Warenkorb</h3>
+            <button id="close_btn_alert" class="close_btn_alert" onclick="closeWindow('basket',event)">x</button>
+            <div class="div_trash">
+              <button class="trash_btn hover" onclick="deleteBasket()">
+                <img class="trash_icon hover" src="./assets/favicon/trash.png" alt="trash-button" />
+              </button>
+            </div>
+            <div id="div_basket_content"></div>
+          </div>
+        <div id="basket_mobile" class="basket_mobile">
+            <button id="basket_btn_mobile" class="basket_btn_mobile hover" onclick="openOverlay(event)">
+                <p>Warenkorb</p>
+                <br><i><p>Gesamtpreis</p></i>
+            </button>
+          </div>
+    </div>
     <div id="ordered_alert" class="div_ordered_alert d_none">
         <div>
             <p>Vielen Dank für deine Bestellung!</p>
             <p>In kürze erhälst du einen Link per E-Mail, über den du die Lieferung verfolgen kannst.</p>
         </div>
-       <button id="close_btn_alert" class="close_btn_alert" onclick="closeAlert()">x</button>
+       <button id="close_btn_alert" class="close_btn_alert" onclick="closeWindow('alert',event)">x</button>
     </div>
     <footer>
       <div class="footer_content">

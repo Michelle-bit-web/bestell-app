@@ -28,17 +28,6 @@
 
 }
 
-.div_basket_overlay{
-    position: absolute;
-    bottom: 0;
-    display: flex;
-    justify-content: center;
-    background-color: rgba(128, 128, 128, 0.584);
-    height: 400px;
-    width: 400px;
-    max-width: 1920px;
-}
-
 .div_total_price{
     text-align: end;
 }
@@ -54,8 +43,24 @@
     color:rgba(172, 255, 47, 0.628);
 }
 
+
+.sticky_basket_mobile{
+
+}
+
+.div_basket_overlay{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: rgba(13, 22, 13, 0.893);
+    height: 400px;
+    width: 400px;
+    max-width: 1920px;
+}
+
 .basket_mobile{
     display: none;
+    justify-content: center;
     height: 100px;
     width: 100%;
 }
@@ -70,9 +75,31 @@
     }
     .basket_mobile{
         display: flex;
+    }
+    .basket_btn{
+        width: 100%;
+    }
+    .sticky_basket_mobile{
+        display: flex;
+        flex-direction: column;
+        
         position: sticky;
         bottom: 0;
         margin-bottom: 24px;
         justify-content: center;
+    }
+    .div_basket_overlay{
+        height: 80vh;
+        width: 100%;
+        border-radius: 10px;
+    }
+    .div_trash{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 40px;
+    }
+    .trash_btn{
+        width: 50%;
     }
 }
