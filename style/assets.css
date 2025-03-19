@@ -33,7 +33,12 @@
 }
 
 .trash_btn{
-    background-color: transparent;
+    background-color: rgba(172, 255, 47, 0.529);
+    border: 5px;
     width: 15%;
     border-radius: 100%;
+}
+
+.trash_btn:hover{
+    background-color: rgba(106, 157, 29, 0.529);
 }

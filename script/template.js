@@ -3,38 +3,13 @@ function triggerNavbar(){
 
 }
 
-function templateMainDish(i){
+function templateDishes(i){
     return /*html*/`
         <div>
-            <p>${dishes[i].image}</p>
-            <div class="div_single_dish">
-                <h3>${dishes[i].name}</h3>
-                <button id="add_to_basket" class="add_to_basket hover" onclick="addToBasket(${i})">+</button>
+            <div> 
+                <p>${dishes[i].image}</p>
+                <img class="img_dishes" src="./assets/img/${dishes[i].image}.PNG" alt="" />
             </div>
-            <p>${dishes[i].content}</p>
-            <p>${dishes[i].price} €</p>
-        </div>
-    `
-}
-
-function templateSideDish(i){
-    return /*html*/`
-        <div>
-            <p>${dishes[i].image}</p>
-            <div class="div_single_dish">
-                <h3>${dishes[i].name}</h3>
-                <button id="add_to_basket" class="add_to_basket hover" onclick="addToBasket(${i})">+</button>
-            </div>
-            <p>${dishes[i].content}</p>
-            <p>${dishes[i].price} €</p>
-        </div>
-    `
-}
-
-function templateDrinks(i){
-    return /*html*/`
-        <div>
-            <p>${dishes[i].image}</p>
             <div class="div_single_dish">
                 <h3>${dishes[i].name}</h3>
                 <button id="add_to_basket" class="add_to_basket hover" onclick="addToBasket(${i})">+</button>

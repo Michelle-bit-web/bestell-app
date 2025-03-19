@@ -1,11 +1,11 @@
 function renderContent(){
     for (let i = 0; i < dishes.length; i++) {
         if(dishes[i].dish == "main"){
-            document.getElementById('main_dishes').innerHTML += templateMainDish(i);
+            document.getElementById('main_dishes').innerHTML += templateDishes(i);
         } else if(dishes[i].dish == "side"){
-            document.getElementById('side_dishes').innerHTML += templateSideDish(i);
+            document.getElementById('side_dishes').innerHTML += templateDishes(i);
         } else if(dishes[i].dish == "drink"){
-            document.getElementById('drinks').innerHTML += templateDrinks(i);
+            document.getElementById('drinks').innerHTML += templateDishes(i);
         }
     }
 }

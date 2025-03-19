@@ -1,6 +1,6 @@
 header,
 footer{
-    background-color: rgb(98, 98, 98);
+    background-color: rgb(25, 42, 25);
     display: flex;
     justify-content: center;
 }
@@ -38,7 +38,7 @@ nav{
 .burger_menu_icon{
     width: 32px;
     height: 2px;
-    background-color: black;
+    background-color: rgb(255, 255, 255);
 }
 
 .content_wrapper{
@@ -46,9 +46,24 @@ nav{
     justify-content: center;
     padding: 16px 0;
 }
+
+.div_restaurant{
+    height: 300px;
+    background-image: url(./assets/img/mockup-idea-2.png);
+    background-size: cover;
+    background-repeat: none;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.restaurant_logo{
+    width: 100px;
+    margin-bottom: -50px;
+}
 /* height ggf bei div-content und dic-basket rausnehmen */
 .div_content{
-    background-color: bisque;
+    background-color:rgba(8, 59, 8, 0.644);
     width: calc(100% - 300px);
     max-width: calc(1920px - 300px);
     padding: 8px 24px;
@@ -62,7 +77,11 @@ nav{
 
 .div_single_dish:hover{
     background-color: rgba(172, 255, 47, 0.529);
-    margin-right: 100px;
-    transition: margin-right 1s;
+    /* margin-right: 100px; */
+    /* transition: margin-right 1s; */
     border-radius: 10px;
+}
+
+.img_dishes{
+    width: 300px;
 }

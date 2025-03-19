@@ -3,6 +3,8 @@ body {
   font-family: "sour-gummy-v1-latin-100";
   font-weight: 300;
   scroll-behavior: smooth;
+  background-color: black;
+  color: white;
 }
 
 a {
