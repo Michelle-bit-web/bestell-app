@@ -77,7 +77,8 @@ button:hover,
     display: flex;
     justify-content: center;
 }
-.order_btn{
+.order_btn,
+.basket_btn_mobile{
     width: 90%;
 }
 
@@ -91,4 +92,9 @@ button:hover,
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.basket_btn_mobile{
+    display: flex;
+    gap: 16px;
 }

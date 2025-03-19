@@ -1,7 +1,5 @@
 let deliveryStatus = true;
 
-let basket = [];
-
 let dishes = [
     {
         "name": "Pizza Sandwich",

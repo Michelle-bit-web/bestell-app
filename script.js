@@ -15,25 +15,26 @@ function getDishImage(i){
     document.getElementById(`dish_img${i}`).style.backgroundImage = `url(./assets/img/${dishes[i].image}.png)`
 }
 
-function checkBasketStatus(){
-    if(document.getElementById('basket_content').innerHTML !== ""){
-        document.getElementById('basket_content_placeholder').classList.add('d_none');
-    }
-}
-
 function addToBasket(i){
     checkBasketContent(i);
     checkStatusDelivery();
-    checkBasketStatus();
+    document.getElementById('basket_content_placeholder').classList.add('d_none');
 }
 
 function checkBasketContent(i){
-    if()
-    document.getElementById('basket_content').innerHTML += templateBasket(i);
-    if(document.getElementById('div_basket_price_content').innerHTML !== ""){
-        document.getElementById('div_basket_price_content').innerHTML = ""
-    };
+    if(document.getElementById('basket_content').innerHTML == document.getElementById(`dish${i}`)){
+        console.log('dann addieren')
+    }
+    else{
+        document.getElementById('basket_content').innerHTML += templateBasket(i);
+    }
+    document.getElementById('div_basket_price_content').innerHTML = ""
     document.getElementById('div_basket_price_content').innerHTML += templateTotalPrice();
+}
+
+function removeFromBasket(i){
+    let currentAmount = document.getElementById(`amount${i}`).innerHTML;
+    currentAmount = `${currentAmount - 1}`; 
 }
 
 function checkStatusDelivery(){
@@ -47,6 +48,7 @@ function checkStatusDelivery(){
 function deleteBasket(){
     document.getElementById(`basket_content`).innerHTML = "";
     document.getElementById('div_basket_price_content').innerHTML = "";
+    document.getElementById('basket_content_placeholder').classList.remove('d_none');
 }
 
 function changeAmount(a, i){
@@ -81,4 +83,9 @@ function order(){
 
 function closeAlert(){
     document.getElementById('ordered_alert').classList.add('d_none');
+}
+
+function openOverlay(){
+    document.getElementById('div_basket_overlay').classList.toggle('d_none');
+    event.stopPropagation();
 }

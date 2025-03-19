@@ -22,7 +22,8 @@ function templateBasket(i) {
     <div>
         <div id="dish${i}" class="div_basket_content">
             <div class="added_dish_title">
-                <div id="amount${i}">1x</div>
+                <div id="amount${i}">1</div>
+                <div>x</div>
                 <h4>${dishes[i].name}</h4><br>
             </div>
             
