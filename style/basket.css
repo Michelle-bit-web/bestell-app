@@ -1,11 +1,31 @@
 .div_basket{
-    background-color:rgba(25, 42, 25, 0.818);
+    background-color:rgba(13, 22, 13, 0.763);
     height: 1000px;
-    width: 300px;
+    width: 25%;
     padding: 8px 24px;
     overflow-x: scroll;
     position: sticky;
-    top:80px;
+    top:0px;
+}
+
+.div_basket_content{
+    background-color: rgba(255, 255, 255, 0.103);
+    border-radius: 10px;
+    margin-bottom: 8px;
+    padding: 16px;
+}
+
+.added_dish_title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.div_change_amount{
+    display: flex;
+    justify-content: space-between;
+    flex:1;
+
 }
 
 .div_basket_overlay{
@@ -18,11 +38,27 @@
     max-width: 1920px;
 }
 
+.div_total_price{
+    text-align: end;
+}
+
 .div_plus_minus{
     display: flex;
     align-items: center;
+    gap: 24px;
+    width: 150px;
+}
+
+.div_total_sum{
+    color:rgba(172, 255, 47, 0.628);
 }
 
 .d_none{
     display: none;
+}
+
+@media(max-width: 800px){
+    .div_basket{
+        display: none;
+    }
 }

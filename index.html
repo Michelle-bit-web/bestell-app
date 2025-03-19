@@ -37,15 +37,15 @@
       <div id="div_content" class="div_content">
         <div>
           <div class="div_restaurant">
-            <img class="restaurant_logo" src="./assets/logo/restaurant-logo.png" alt="" />
+            <img class="restaurant_logo" src="./assets/logo/green-fire-logo.png" alt="" />
           </div>
           <h1>Green Fire</h1>
         </div>
         <div>
           <div>Sternebewertung</div>
           <div class="div_choose_btn">
-            <button id="delivery_btn" class="choosed_btn hover" onclick="deliveryOrPickup(1, event)">Lieferung</button>
-            <button id="pickup_btn" class="not_choosed_btn hover" onclick="deliveryOrPickup(-1, event)">Abholung</button>
+            <button id="delivery_btn" class="choosed_btn hover" onclick="deliveryOrPickup(1)">Lieferung</button>
+            <button id="pickup_btn" class="not_choosed_btn hover" onclick="deliveryOrPickup(-1)">Abholung</button>
           </div>
         </div>
         <div id="main_dishes">
@@ -61,12 +61,14 @@
       <div id="div_basket" class="div_basket">
         <div class="sticky_basket">
           <h3>Warenkorb</h3>
+          <div id="basket_content_placeholder" div="basket_content_placeholder">Füge Gerichte deiner Wahl hinzu</div>
           <div class="div_trash">
             <button class="trash_btn hover" onclick="deleteBasket()">
               <img class="trash_icon hover" src="./assets/favicon/trash.png" alt="trash-button" />
             </button>
           </div>
-          <div id="div_basket_content"></div>
+          <div id="basket_content"></div>
+          <div id="div_basket_price_content"></div>
         </div>
       </div>
       <div id="div_basket_overlay" class="div_basket_overlay d_none">
@@ -79,6 +81,13 @@
         <div id="div_basket_content"></div>
       </div>
     </section>
+    <div id="ordered_alert" class="div_ordered_alert d_none">
+        <div>
+            <p>Vielen Dank für deine Bestellung!</p>
+            <p>In kürze erhälst du einen Link per E-Mail, über den du die Lieferung verfolgen kannst.</p>
+        </div>
+       <button id="close_btn_alert" class="close_btn_alert" onclick="closeAlert()">x</button>
+    </div>
     <footer>
       <div class="footer_content">
         <a class="footer_logo_link" href="#top-logo"><img class="footer_logo" src="./assets/logo/bestellapp-logo.PNG" alt="" /></a>

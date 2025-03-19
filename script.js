@@ -7,17 +7,46 @@ function renderContent(){
         } else if(dishes[i].dish == "drink"){
             document.getElementById('drinks').innerHTML += templateDishes(i);
         }
+        getDishImage(i);
+    }
+}
+
+function getDishImage(i){
+    document.getElementById(`dish_img${i}`).style.backgroundImage = `url(./assets/img/${dishes[i].image}.png)`
+}
+
+function checkBasketStatus(){
+    if(document.getElementById('basket_content').innerHTML !== ""){
+        document.getElementById('basket_content_placeholder').classList.add('d_none');
     }
 }
 
 function addToBasket(i){
-    document.getElementById('div_basket_content').innerHTML += templateBasket(i);
-    document.getElementById('div_basket_content').innerHTML += templateTotalPrice();
+    checkBasketContent(i);
+    checkStatusDelivery();
+    checkBasketStatus();
+}
 
+function checkBasketContent(i){
+    if()
+    document.getElementById('basket_content').innerHTML += templateBasket(i);
+    if(document.getElementById('div_basket_price_content').innerHTML !== ""){
+        document.getElementById('div_basket_price_content').innerHTML = ""
+    };
+    document.getElementById('div_basket_price_content').innerHTML += templateTotalPrice();
+}
+
+function checkStatusDelivery(){
+    if(deliveryStatus == false){
+        document.getElementById('delivery_costs').classList.add('d_none');
+    } else{
+        document.getElementById('delivery_costs').classList.remove('d_none');
+    }
 }
 
 function deleteBasket(){
-    document.getElementById(`div_basket_content`).innerHTML = "";
+    document.getElementById(`basket_content`).innerHTML = "";
+    document.getElementById('div_basket_price_content').innerHTML = "";
 }
 
 function changeAmount(a, i){
@@ -29,21 +58,27 @@ function changeAmount(a, i){
 
 }
 
-function deliveryOrPickup(a, event){
+function deliveryOrPickup(a){
     if(a < 0){
         document.getElementById('delivery_btn').classList.add('not_choosed_btn');
         document.getElementById('pickup_btn').classList.add('choosed_btn');
         document.getElementById('pickup_btn').classList.remove('not_choosed_btn');
+        deliveryStatus = false;
     } else if(a > 0){
         document.getElementById('pickup_btn').classList.add('not_choosed_btn');
         document.getElementById('delivery_btn').classList.add('choosed_btn');
         document.getElementById('delivery_btn').classList.remove('not_choosed_btn');
+        deliveryStatus = true;
     };
-    // event.target.classList.toogle('not_choosed_btn');
-    // event.target.classList.remove('not_choosed_btn');
+    checkStatusDelivery();
 }
 
-// secondTitle = lang == "de" ? "Webseite":"Website";
-//     document.getElementById('title-two').innerHTML = secondTitle;
-// }
+function order(){
+    document.getElementById('ordered_alert').classList.remove('d_none');
+    document.getElementById('basket_content').innerHTML = "";
+    document.getElementById('div_basket_price_content').innerHTML = "";
+}
 
+function closeAlert(){
+    document.getElementById('ordered_alert').classList.add('d_none');
+}

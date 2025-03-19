@@ -49,13 +49,23 @@
 
 h1{
     font-family: 'sour-gummy-v1-latin-100';
-    font-size: 48px;
+    font-size: 56px;
 }
 
 h2{
-    font-size: 40px;
+    font-size: 48px;
 }
 
 h3{
-    font-size: 32px;
+    font-size: 40px;
+}
+
+#main_dish_title,
+#side_dish_title,
+#drinks_title{
+  border-bottom: 3px solid  rgba(172, 255, 47, 0.628);
+}
+
+.side_links{
+  font-size: 28px;
 }

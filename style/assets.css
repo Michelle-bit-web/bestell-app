@@ -1,9 +1,21 @@
 button{
     background-color: rgb(24, 37, 15);
     border: 2px solid  rgb(172, 255, 47);
-    width: 5%;
+    width: 7%;
+    min-height: 30px;
     border-radius: 10px;
     color:  rgb(172, 255, 47);
+    font-family: 'sour-gummy-v1-latin-100';
+    font-size: 28px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button:hover,
+.order_btn:hover{
+    background-color: rgb(58, 92, 34);
 }
 
 .hover:hover{
@@ -19,7 +31,7 @@ button{
 
 .choosed_btn{
     width: 200px;
-    height: 30px;
+    height: 40px;
     border-radius: 10px;
     background-color: rgb(172, 255, 47);
     box-shadow:3px 0px rgba(0, 0, 0, 0.348);
@@ -49,8 +61,34 @@ button{
     border: 5px;
     width: 15%;
     border-radius: 100%;
+    margin-bottom: 24px;
 }
 
 .trash_btn:hover{
     background-color: rgb(53, 80, 33);
+}
+
+.change_amount_btn{
+    width: 40px;
+    height: 40px;
+}
+
+.div_order_btn{
+    display: flex;
+    justify-content: center;
+}
+.order_btn{
+    width: 90%;
+}
+
+.link_in_order_btn{
+    width: 100%;
+}
+
+.close_btn_alert{
+    text-align: center;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
