@@ -40,13 +40,15 @@
             <img class="restaurant_logo" src="./assets/logo/green-fire-logo.png" alt="" />
           </div>
           <h1>Green Fire</h1>
+          <div class="div_stars"> <img class="star_img" src="./assets/favicon/star.png" alt="">4,6 (23)</div>
+          <span>Wir stehen für frische, lebendige Küche, gesunden Mahlzeiten, Grillen über dem Holzfeuer und saisonale Gerichte.</span>
         </div>
         <div>
-          <div>Sternebewertung</div>
           <div class="div_choose_btn">
             <button id="delivery_btn" class="choosed_btn hover" onclick="deliveryOrPickup(1)">Lieferung</button>
             <button id="pickup_btn" class="not_choosed_btn hover" onclick="deliveryOrPickup(-1)">Abholung</button>
           </div>
+          <span id="delivery_info" class="delivery_info">* zzgl. 5€ Lieferkosten</span>
         </div>
         <div id="main_dishes">
           <h2 id="main_dish_title">Hauptgerichte</h2>
@@ -64,7 +66,7 @@
           <div id="basket_content_placeholder" div="basket_content_placeholder">Füge Gerichte deiner Wahl hinzu</div>
           <div class="div_trash">
             <button class="trash_btn hover" onclick="deleteBasket()">
-              <img class="trash_icon hover" src="./assets/favicon/trash.png" alt="trash-button" />
+              <img class="trash_icon hover" src="./assets/favicon/trash.PNG" alt="trash-button" />
             </button>
           </div>
           <div id="basket_content"></div>
@@ -78,10 +80,13 @@
             <button id="close_btn_alert" class="close_btn_alert" onclick="closeWindow('basket',event)">x</button>
             <div class="div_trash">
               <button class="trash_btn hover" onclick="deleteBasket()">
-                <img class="trash_icon hover" src="./assets/favicon/trash.png" alt="trash-button" />
+                <img class="trash_icon hover" src="./assets/favicon/trash.PNG" alt="trash-button" />
               </button>
             </div>
-            <div id="div_basket_content"></div>
+            <div id="div_basket_content">
+              <div id="basket_content"></div>
+              <div id="div_basket_price_content"></div>
+            </div>
           </div>
         <div id="basket_mobile" class="basket_mobile">
             <button id="basket_btn_mobile" class="basket_btn_mobile hover" onclick="openOverlay(event)">

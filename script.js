@@ -16,39 +16,52 @@ function getDishImage(i){
 }
 
 function addToBasket(i){
-    checkBasketContent(i);
-    checkStatusDelivery();
+    // checkBasketContent(i);
+    document.getElementById('basket_content').innerHTML += templateBasket(i);
+    document.getElementById('div_basket_price_content').innerHTML = ""
+    document.getElementById('div_basket_price_content').innerHTML += templateTotalPrice();
+    basket.push(dishes[i].price);
+    checkStatusDelivery(i);
     document.getElementById('basket_content_placeholder').classList.add('d_none');
 }
 
-function checkBasketContent(i){
-    if(document.getElementById('basket_content').innerHTML == document.getElementById(`dish${i}`)){
-        console.log('dann addieren')
-    }
-    else{
-        document.getElementById('basket_content').innerHTML += templateBasket(i);
-    }
-    document.getElementById('div_basket_price_content').innerHTML = ""
-    document.getElementById('div_basket_price_content').innerHTML += templateTotalPrice();
-}
 
 function removeFromBasket(i){
     let currentAmount = document.getElementById(`amount${i}`).innerHTML;
     currentAmount = `${currentAmount - 1}`; 
 }
 
-function checkStatusDelivery(){
+function checkStatusDelivery(i){
+    
     if(deliveryStatus == false){
         document.getElementById('delivery_costs').classList.add('d_none');
+        let deliveryCost = "";
+        savePrices(deliveryCost);
     } else{
         document.getElementById('delivery_costs').classList.remove('d_none');
+        let deliveryCost = 5;
+        savePrices(deliveryCost);
+        // basket.push({deliveryCost})
     }
+}
+
+function savePrices(deliveryCost){
+    for (let i = 0; i < basket.length; i++) {
+        // totalCost.push(basket[i]);
+        let currentSum = (document.getElementById('sum').innerHTML);
+        document.getElementById('sum').innerHTML = "";
+        document.getElementById('sum').innerHTML = `${(currentSum + basket[i])}`
+    }
+    let totalPrice = document.getElementById('sum').innerHTML;
+    document.getElementById('sum').innerHTML = "";
+    document.getElementById('sum').innerHTML = `${totalPrice + deliveryCost}`
 }
 
 function deleteBasket(){
     document.getElementById(`basket_content`).innerHTML = "";
     document.getElementById('div_basket_price_content').innerHTML = "";
     document.getElementById('basket_content_placeholder').classList.remove('d_none');
+    basket = [];
 }
 
 function changeAmount(a, i){
@@ -61,6 +74,7 @@ function changeAmount(a, i){
 }
 
 function deliveryOrPickup(a){
+    document.getElementById('sum').innerHTML = "";
     if(a < 0){
         document.getElementById('delivery_btn').classList.add('not_choosed_btn');
         document.getElementById('pickup_btn').classList.add('choosed_btn');

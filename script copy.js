@@ -1,0 +1,109 @@
+function renderContent(){
+    for (let i = 0; i < dishes.length; i++) {
+        if(dishes[i].dish == "main"){
+            document.getElementById('main_dishes').innerHTML += templateDishes(i);
+        } else if(dishes[i].dish == "side"){
+            document.getElementById('side_dishes').innerHTML += templateDishes(i);
+        } else if(dishes[i].dish == "drink"){
+            document.getElementById('drinks').innerHTML += templateDishes(i);
+        }
+        getDishImage(i);
+    }
+}
+
+function getDishImage(i){
+    document.getElementById(`dish_img${i}`).style.backgroundImage = `url(./assets/img/${dishes[i].image}.png)`
+}
+
+function addToBasket(i){
+    // checkBasketContent(i);
+    document.getElementById('basket_content').innerHTML += templateBasket(i);
+    document.getElementById('div_basket_price_content').innerHTML = ""
+    document.getElementById('div_basket_price_content').innerHTML += templateTotalPrice();
+    basket.push(dishes[i].price);
+    checkStatusDelivery(i);
+    document.getElementById('basket_content_placeholder').classList.add('d_none');
+}
+
+
+function removeFromBasket(i){
+    let currentAmount = document.getElementById(`amount${i}`).innerHTML;
+    currentAmount = `${currentAmount - 1}`; 
+}
+
+function checkStatusDelivery(i){
+    
+    if(deliveryStatus == false){
+        document.getElementById('delivery_costs').classList.add('d_none');
+        let deliveryCost = "";
+        savePrices(deliveryCost);
+    } else{
+        document.getElementById('delivery_costs').classList.remove('d_none');
+        let deliveryCost = 5;
+        savePrices(deliveryCost);
+        // basket.push({deliveryCost})
+    }
+}
+
+function savePrices(deliveryCost){
+    for (let i = 0; i < basket.length; i++) {
+        // totalCost.push(basket[i]);
+        let currentSum = (document.getElementById('sum').innerHTML);
+        document.getElementById('sum').innerHTML = "";
+        document.getElementById('sum').innerHTML = `${(currentSum + basket[i])}`
+    }
+    let totalPrice = document.getElementById('sum').innerHTML;
+    document.getElementById('sum').innerHTML = "";
+    document.getElementById('sum').innerHTML = `${totalPrice + deliveryCost}`
+}
+
+function deleteBasket(){
+    document.getElementById(`basket_content`).innerHTML = "";
+    document.getElementById('div_basket_price_content').innerHTML = "";
+    document.getElementById('basket_content_placeholder').classList.remove('d_none');
+    basket = [];
+}
+
+function changeAmount(a, i){
+    if(a > 0){
+        document.getElementById(`amount${i}`).innerHTML = `${+1}`;
+    } else if(a < 0){
+        document.getElementById(`amount${i}`).innerHTML = `${-1}`;
+    }
+
+}
+
+function deliveryOrPickup(a){
+    document.getElementById('sum').innerHTML = "";
+    if(a < 0){
+        document.getElementById('delivery_btn').classList.add('not_choosed_btn');
+        document.getElementById('pickup_btn').classList.add('choosed_btn');
+        document.getElementById('pickup_btn').classList.remove('not_choosed_btn');
+        deliveryStatus = false;
+    } else if(a > 0){
+        document.getElementById('pickup_btn').classList.add('not_choosed_btn');
+        document.getElementById('delivery_btn').classList.add('choosed_btn');
+        document.getElementById('delivery_btn').classList.remove('not_choosed_btn');
+        deliveryStatus = true;
+    };
+    checkStatusDelivery();
+}
+
+function order(){
+    document.getElementById('ordered_alert').classList.remove('d_none');
+    document.getElementById('basket_content').innerHTML = "";
+    document.getElementById('div_basket_price_content').innerHTML = "";
+}
+
+function closeWindow(a, event){
+    if(a == 'basket'){
+        document.getElementById('div_basket_overlay').classList.add('d_none');
+    }else if(a == 'alert'){
+            document.getElementById('ordered_alert').classList.add('d_none');}
+    event.stopPropagation();
+}
+
+function openOverlay(event){
+    document.getElementById('div_basket_overlay').classList.toggle('d_none');
+    event.stopPropagation();
+}

@@ -54,7 +54,7 @@ function templateTotalPrice() {
         </div>
         <div class="div_total_sum">
             <b><p>Gesamt</p></b>
-            <p>€</p>
+            <p id="sum"></p><span>€</span>
         </div>
         <div class="div_order_btn">
         <a class="link_in_order_btn" href="#top-logo">

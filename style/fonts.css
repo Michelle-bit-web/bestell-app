@@ -50,6 +50,7 @@
 h1{
     font-family: 'sour-gummy-v1-latin-100';
     font-size: 56px;
+    margin-bottom: 8px;
 }
 
 h2{
@@ -68,4 +69,8 @@ h3{
 
 .side_links{
   font-size: 28px;
+}
+
+.delivery_info{
+  font-size: 18px;
 }

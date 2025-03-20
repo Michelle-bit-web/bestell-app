@@ -27,6 +27,7 @@ button:hover,
     width: fit-content;
     background-color: rgb(154, 152, 152);
     border-radius: 10px;
+    margin-top: 16px;
 }
 
 .choosed_btn{
