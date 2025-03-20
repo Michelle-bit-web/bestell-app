@@ -22,17 +22,17 @@ function templateBasket(i) {
     <div>
         <div id="dish${i}" class="div_basket_content">
             <div class="added_dish_title">
-                <div id="amount${i}">1</div>
+                <div id="amount${i}">${basket[i].amount}</div>
                 <div>x</div>
-                <h4>${dishes[i].name}</h4><br>
+                <h4>${basket[i].name}</h4><br>
             </div>
             
            <div class="div_change_amount">
              <div class="div_plus_minus">
-                  <button id="plus_amount" class="change_amount_btn hover" onclick="addToBasket(${i})">+</button>
-                  <button id="minus_amount" class="change_amount_btn hover" onclick="removeFromBasket(${i})">-</button>
+                  <button id="plus_amount" class="change_amount_btn hover" onclick="changeAmount(1, ${i})">+</button>
+                  <button id="minus_amount" class="change_amount_btn hover" onclick="changeAmount(-1, ${i})">-</button>
              </div>
-             <p id="calc_price_single_dish${i}">${dishes[i].price} €</p>
+             <p id="calc_price_single_dish${i}">${basket[i].price} €</p>
            </div>
             
         </div>
@@ -46,16 +46,23 @@ function templateTotalPrice() {
     <div class="div_total_price">
         <div class="div_current_sum">
             <p>Zwischensumme</p>
-            <p>€</p>
+            <div class="div_basket_prices">
+             <p id="subtotal"></p>
+             <span>€</span>
+            </div>
         </div>
         <div id="delivery_costs" class="div_delivery_costs">
             <p>zzgl. Lieferkosten</p>
             <p id="delivery_cost">5 €</p>
         </div>
         <div class="div_total_sum">
-            <b><p>Gesamt</p></b>
-            <p id="sum"></p><span>€</span>
+             <b><p>Gesamt</p></b>
+            <div class="div_basket_prices">
+             <p id="sum"></p>
+             <span>€</span>
+            </div>
         </div>
+            
         <div class="div_order_btn">
         <a class="link_in_order_btn" href="#top-logo">
          <button id="order_btn" class="order_btn hover" onclick="order()">Bestellen</button>

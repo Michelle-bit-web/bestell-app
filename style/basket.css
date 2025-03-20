@@ -27,6 +27,12 @@
     flex:1;
 
 }
+.div_basket_prices{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+}
 
 .div_total_price{
     text-align: end;

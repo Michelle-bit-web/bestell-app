@@ -16,23 +16,23 @@ function getDishImage(i){
 }
 
 function addToBasket(i){
-    // checkBasketContent(i);
-    document.getElementById('basket_content').innerHTML += templateBasket(i);
-    document.getElementById('div_basket_price_content').innerHTML = ""
-    document.getElementById('div_basket_price_content').innerHTML += templateTotalPrice();
-    basket.push(dishes[i].price);
+    document.getElementById('basket_content').innerHTML = "";
+    basket.push(dishes[i]);
+    renderBasket();
     checkStatusDelivery(i);
     document.getElementById('basket_content_placeholder').classList.add('d_none');
 }
 
-
-function removeFromBasket(i){
-    let currentAmount = document.getElementById(`amount${i}`).innerHTML;
-    currentAmount = `${currentAmount - 1}`; 
+function renderBasket(){
+    document.getElementById('basket_content').innerHTML = "";
+    document.getElementById('div_basket_price_content').innerHTML = "";
+    for (let i = 0; i < basket.length; i++) {
+        document.getElementById('basket_content').innerHTML += templateBasket(i);
+        document.getElementById('div_basket_price_content').innerHTML += templateTotalPrice();
+    }
 }
 
 function checkStatusDelivery(i){
-    
     if(deliveryStatus == false){
         document.getElementById('delivery_costs').classList.add('d_none');
         let deliveryCost = "";
@@ -44,17 +44,36 @@ function checkStatusDelivery(i){
         // basket.push({deliveryCost})
     }
 }
+//muss ich eher die Basketpreise = dish.preis + dishpreis usw
+function changeAmount(a, i){
+    let newBasketAmount;
+    let newBasketPrice;
+    if(a > 0){
+        newBasketAmount = basket[i].amount + 1;
+        newBasketAmount = basket[i].amount;
+        newBasketPrice = basket[i].price * newBasketAmount;
+        basket[i].price =  newBasketPrice;
+    } else if(a < 0){
+        basket[i].amount = basket[i].amount - 1;
+        basket[i].price = basket[i].price - basket[i].price;
+    };
+    renderBasket()
+}
 
 function savePrices(deliveryCost){
+    let x;
     for (let i = 0; i < basket.length; i++) {
-        // totalCost.push(basket[i]);
-        let currentSum = (document.getElementById('sum').innerHTML);
-        document.getElementById('sum').innerHTML = "";
-        document.getElementById('sum').innerHTML = `${(currentSum + basket[i])}`
+        document.getElementById('subtotal').innerHTML = `${basket[i].price}`;
+        document.getElementById('sum').innerHTML = `${(basket[i].price + deliveryCost)}`;
+        x = basket[i].price;
+        // let subtotal = basket[i].price;
+        // let currentSum = (document.getElementById('sum').innerHTML);
+        // document.getElementById('sum').innerHTML = "";
+        // document.getElementById('sum').innerHTML = `${(currentSum + basket[i])}`
     }
-    let totalPrice = document.getElementById('sum').innerHTML;
-    document.getElementById('sum').innerHTML = "";
-    document.getElementById('sum').innerHTML = `${totalPrice + deliveryCost}`
+    // let totalPrice = document.getElementById('sum').innerHTML;
+    // document.getElementById('sum').innerHTML = "";
+    // document.getElementById('sum').innerHTML = `${totalPrice + deliveryCost}`
 }
 
 function deleteBasket(){
@@ -62,15 +81,6 @@ function deleteBasket(){
     document.getElementById('div_basket_price_content').innerHTML = "";
     document.getElementById('basket_content_placeholder').classList.remove('d_none');
     basket = [];
-}
-
-function changeAmount(a, i){
-    if(a > 0){
-        document.getElementById(`amount${i}`).innerHTML = `${+1}`;
-    } else if(a < 0){
-        document.getElementById(`amount${i}`).innerHTML = `${-1}`;
-    }
-
 }
 
 function deliveryOrPickup(a){

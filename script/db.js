@@ -11,7 +11,8 @@ let dishes = [
         "dish": "main",
         "price": 9.50,
         "content": "Hausgemachter Pizzateig im Steinofen mit Tomaten, Mozzarella und Basilikum.",
-        "delivery": true
+        "delivery": true,
+        "amount": 1,
     },
     {
         "name": "Grilled Chicken",
@@ -19,7 +20,8 @@ let dishes = [
         "dish": "main",
         "price": 12.90,
         "content": "Zarte Hähnchenbrust vom Grill. Dazu Semmelklöße und frische Champignons und Dill-Sauce.",
-        "delivery": true
+        "delivery": true,
+        "amount": 1,
     },
     {
         "name": "Basilikum Spätzle",
@@ -27,7 +29,8 @@ let dishes = [
         "dish": "main",
         "price": 10.40,
         "content": "Hausgemachte Eierspätzle mit Basilikum und weiteren Kräutern - mit Käse überbacken ",
-        "delivery": true
+        "delivery": true,
+        "amount": 1,
     },
     {
         "name": "Hackfresse",
@@ -35,7 +38,8 @@ let dishes = [
         "dish": "main",
         "price": 9.50,
         "content": "Große Tortilla-Tasche mit Hackfleisch, Zwiebeln, Paprika, und Guacamole gefüllt.",
-        "delivery": true
+        "delivery": true,
+        "amount": 1,
     },
     {
         "name": "Potato Fries",
@@ -43,7 +47,8 @@ let dishes = [
         "dish": "side",
         "price": 4.50,
         "content": "Hausgemachter knusprige Kartoffelstücken.",
-        "delivery": true
+        "delivery": true,
+        "amount": 1,
     },
     {
         "name": "Sweet Potato Fries",
@@ -51,7 +56,8 @@ let dishes = [
         "dish": "side",
         "price": 4.50,
         "content": "Hausgemachter knusprige Süßkartoffelstücken.",
-        "delivery": true
+        "delivery": true,
+        "amount": 1,
     },
     {
         "name": "Gartensalat",
@@ -59,7 +65,8 @@ let dishes = [
         "dish": "side",
         "price": 9.50,
         "content": "Klassischer Romansalat mit Tomaten, Paprika, roten Zwiebeln und einem Balsamico-Dressing.",
-        "delivery": true
+        "delivery": true,
+        "amount": 1,
     },
     {
         "name": "Basilikum-Zitrone-Limonade",
@@ -67,7 +74,8 @@ let dishes = [
         "dish": "drink",
         "price": 1.20,
         "content": "Limonade von Soda Libre.",
-        "delivery": true
+        "delivery": true,
+        "amount": 1,
     },
     {
         "name": "Himbeer-Minze-Limonade",
@@ -75,7 +83,8 @@ let dishes = [
         "dish": "drink",
         "price": 1.20,
         "content": "Limonade von Soda Libre.",
-        "delivery": true
+        "delivery": true,
+        "amount": 1,
     },
     {
         "name": "Cola",
@@ -83,6 +92,7 @@ let dishes = [
         "dish": "drink",
         "price": 1.20,
         "content": "Cola von Soda Libre.",
-        "delivery": true
+        "delivery": true,
+        "amount": 1,
     }
 ]
