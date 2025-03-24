@@ -74,3 +74,8 @@ h3{
 .delivery_info{
   font-size: 18px;
 }
+
+.div_basket_content,
+.div_total_price{
+  font-size: 20px;
+}

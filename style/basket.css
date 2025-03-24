@@ -27,6 +27,11 @@
     flex:1;
 
 }
+
+.price_single_dish{
+    flex:1;
+}
+
 .div_basket_prices{
     display: flex;
     align-items: center;
@@ -56,12 +61,19 @@
 
 .div_basket_overlay{
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    flex-direction: column;
+    justify-content: space-between;
     background-color: rgba(13, 22, 13, 0.893);
     height: 400px;
     width: 400px;
     max-width: 1920px;
+}
+
+.basket_overlay_top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
 }
 
 .basket_mobile{
@@ -102,8 +114,8 @@
     .div_trash{
         display: flex;
         align-items: center;
-        justify-content: center;
-        margin-top: 40px;
+        justify-content: space-between;
+        margin-left: 40px;
     }
     .trash_btn{
         width: 50%;

@@ -4,6 +4,10 @@ let basket = [];
 
 let totalCost = [];
 
+let deliveryCost = [];
+
+let savedPrice = [];
+
 let dishes = [
     {
         "name": "Pizza Sandwich",

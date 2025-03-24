@@ -17,70 +17,91 @@ function getDishImage(i){
 
 function addToBasket(i){
     document.getElementById('basket_content').innerHTML = "";
-    basket.push(dishes[i]);
+    checkForDuplicate(i);
     renderBasket();
-    checkStatusDelivery(i);
+    checkStatusDelivery();
     document.getElementById('basket_content_placeholder').classList.add('d_none');
 }
+
+function checkForDuplicate(i){
+    if(!basket.find(item => item.name == dishes[i].name)){
+        basket.push(dishes[i]);
+        savedPrice.push(dishes[i].price);
+    }else{
+        let basketIndex = basket.findIndex(item => item.name == dishes[i].name);
+        basket[basketIndex].amount = basket[basketIndex].amount +1;
+        basket[basketIndex].price = savedPrice[0] * basket[basketIndex].amount; 
+        console.log(basket[basketIndex].amount, basket[basketIndex].price)
+    }
+} 
 
 function renderBasket(){
     document.getElementById('basket_content').innerHTML = "";
     document.getElementById('div_basket_price_content').innerHTML = "";
-    for (let i = 0; i < basket.length; i++) {
-        document.getElementById('basket_content').innerHTML += templateBasket(i);
-        document.getElementById('div_basket_price_content').innerHTML += templateTotalPrice();
-    }
+    for (let b = 0; b < basket.length; b++) {
+        if(basket[basket[b]] == true){changeAmount(1, b)}{
+            document.getElementById('basket_content').innerHTML += templateBasket(b);
+            document.getElementById('div_basket_overlay').innerHTML += templateBasket(b);
+        }
+    };
+    document.getElementById('div_basket_price_content').innerHTML += templateTotalPrice();
+    document.getElementById('div_basket_overlay').innerHTML += templateTotalPrice();
 }
 
-function checkStatusDelivery(i){
+function checkStatusDelivery(){
     if(deliveryStatus == false){
         document.getElementById('delivery_costs').classList.add('d_none');
-        let deliveryCost = "";
-        savePrices(deliveryCost);
+        deliveryCost.push(0);
+       calcPrices();
     } else{
         document.getElementById('delivery_costs').classList.remove('d_none');
-        let deliveryCost = 5;
-        savePrices(deliveryCost);
-        // basket.push({deliveryCost})
+        deliveryCost.push(5);
+        calcPrices();
     }
 }
-//muss ich eher die Basketpreise = dish.preis + dishpreis usw
 function changeAmount(a, i){
-    let newBasketAmount;
-    let newBasketPrice;
-    if(a > 0){
-        newBasketAmount = basket[i].amount + 1;
-        newBasketAmount = basket[i].amount;
-        newBasketPrice = basket[i].price * newBasketAmount;
-        basket[i].price =  newBasketPrice;
-    } else if(a < 0){
-        basket[i].amount = basket[i].amount - 1;
-        basket[i].price = basket[i].price - basket[i].price;
-    };
-    renderBasket()
+    if( a > 0){
+        increment();
+    }else if(a < 0){
+        decrement();
+    }
+    renderBasket();
+    checkStatusDelivery();
 }
 
-function savePrices(deliveryCost){
-    let x;
-    for (let i = 0; i < basket.length; i++) {
-        document.getElementById('subtotal').innerHTML = `${basket[i].price}`;
-        document.getElementById('sum').innerHTML = `${(basket[i].price + deliveryCost)}`;
-        x = basket[i].price;
-        // let subtotal = basket[i].price;
-        // let currentSum = (document.getElementById('sum').innerHTML);
-        // document.getElementById('sum').innerHTML = "";
-        // document.getElementById('sum').innerHTML = `${(currentSum + basket[i])}`
+function increment(){
+
+}
+
+function decrement(){
+    let basketIndex = basket.findIndex(item => item.name == dishes[i].name);
+    if(basket[i].amount == 1){
+        basket.splice(basketIndex, 1);
+        console.log(basket[basketIndex].amount, basket[basketIndex].price)
+    }else{
+        basket[basketIndex].amount = basket[basketIndex].amount -1;
+        basket[basketIndex].price = savedPrice[0] * basket[basketIndex].amount;
+        console.log(basket[basketIndex].amount, basket[basketIndex].price)
     }
-    // let totalPrice = document.getElementById('sum').innerHTML;
-    // document.getElementById('sum').innerHTML = "";
-    // document.getElementById('sum').innerHTML = `${totalPrice + deliveryCost}`
+}
+
+function calcPrices(){
+    
+    for (let i = 0; i < basket.length; i++) {
+        document.getElementById('subtotal').innerHTML = `${savedPrice[i]}`;
+        document.getElementById('sum').innerHTML = `${(savedPrice[i] + deliveryCost)}`;
+    }
 }
 
 function deleteBasket(){
     document.getElementById(`basket_content`).innerHTML = "";
     document.getElementById('div_basket_price_content').innerHTML = "";
     document.getElementById('basket_content_placeholder').classList.remove('d_none');
+    document.getElementById('div_basket_overlay').innerHTML = "";
     basket = [];
+    totalCost = [];
+    deliveryCost = [];
+    savedPrice = [];
 }
 
 function deliveryOrPickup(a){

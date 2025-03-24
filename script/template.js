@@ -17,22 +17,22 @@ function templateDishes(i) {
     `;
 }
 
-function templateBasket(i) {
+function templateBasket(b) {
   return /*html*/ `
     <div>
-        <div id="dish${i}" class="div_basket_content">
+        <div id="dish${b}" class="div_basket_content">
             <div class="added_dish_title">
-                <div id="amount${i}">${basket[i].amount}</div>
+                <div id="amount${b}">${basket[b].amount}</div>
                 <div>x</div>
-                <h4>${basket[i].name}</h4><br>
+                <h4>${basket[b].name}</h4><br>
             </div>
             
            <div class="div_change_amount">
              <div class="div_plus_minus">
-                  <button id="plus_amount" class="change_amount_btn hover" onclick="changeAmount(1, ${i})">+</button>
-                  <button id="minus_amount" class="change_amount_btn hover" onclick="changeAmount(-1, ${i})">-</button>
+                  <button id="plus_amount" class="change_amount_btn hover" onclick="changeAmount(1, ${b})">+</button>
+                  <button id="minus_amount" class="change_amount_btn hover" onclick="changeAmount(-1, ${b})">-</button>
              </div>
-             <p id="calc_price_single_dish${i}">${basket[i].price} €</p>
+             <p id="calc_price_single_dish${b}" class="price_single_dish">${basket[b].price} €</p>
            </div>
             
         </div>
