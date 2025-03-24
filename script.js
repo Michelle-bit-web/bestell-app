@@ -20,15 +20,10 @@ function addToBasket(i) {
 function checkForDuplicate(i) {
   let search = basket.find((item) => item.name == dishes[i].name);
   if (search == undefined) {
-    pushIntoArray(i);
+    basket.push(dishes[i]);
   } else {
     search.amount += 1;
   }
-}
-
-function pushIntoArray(i) {
-  basket.push(dishes[i]);
-  savedPrice.push(dishes[i].price);
 }
 
 function renderBasket() {
@@ -51,6 +46,7 @@ function getTemplateTotalPrices() {
 }
 
 function checkStatusDelivery() {
+    deliveryCost = [];
   if (deliveryStatus == false) {
     document.getElementById("delivery_costs").classList.add("d_none");
     deliveryCost.push(0);
@@ -74,20 +70,29 @@ function changeAmount(a, basketIndex) {
 }
 
 function calculatePrices(){
-   
+    sumPrices = [];
+    totalCost = [];
+    for (let i = 0; i < basket.length; i++) {
+        sumPrices.push({
+            "name": basket[i].name,
+            "price": (basket[i].price * basket[i].amount),
+            "amount": basket[i].amount,
+        });
+        totalCost.push(sumPrices[i].price);
+        document.getElementById(`calc_price_single_dish${i}`).innerHTML = `${sumPrices[i].price} €`
+    }
+   console.log('calculator is running');
+   console.log(deliveryCost);
+   totalCost.push(deliveryCost[0]);
+   console.log(totalCost);
+   let sum = 0;
+   for (const el of totalCost){
+    sum += el;
+   } console.log(sum)
+   document.getElementById("sum").innerHTML = `${(sum)}`;
+  
+  
 }
-
-// function calcPriceSingleDish(basketIndex) {
-//   savedPrice[basketIndex] = basket[basketIndex].price * basket[basketIndex].amount;
-// }
-
-// function calcPrices() {
-//   for (let i = 0; i < basket.length; i++) {
-//     document.getElementById("subtotal").innerHTML = `${savedPrice[i]}`;
-//     totalCost.push(savedPrice[i] + deliveryCost);
-//     document.getElementById("sum").innerHTML = `${totalCost}`;
-//   }
-// }
 
 function deleteBasket() {
   clearInnerHtml();

@@ -6,7 +6,7 @@ let totalCost = [];
 
 let deliveryCost = [];
 
-let savedPrice = [];
+let sumPrices = [];
 
 let dishes = [
     {
