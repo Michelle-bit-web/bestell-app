@@ -92,7 +92,7 @@ button:hover,
 }
 
 .close_btn_alert {
-  height: 50px;
+  height: 40px;
   width: 40px;
   display: flex;
   align-items: center;
@@ -102,6 +102,19 @@ button:hover,
 .basket_btn_mobile {
   display: flex;
   gap: 16px;
+}
+
+.trash_btn_mobile {
+  background-color: rgb(172, 255, 47);
+  border: 5px;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  margin: 8px 0;
+}
+
+.trash_icon_mobile {
+  width: 30px
 }
 
 @media (max-width: 700px) {
@@ -114,6 +127,11 @@ button:hover,
 @media (max-width: 500px) {
   button {
     width: 10%;
+  }
+  .close_btn_alert{
+    height: 30px;
+    width: 30px;
+    font-size: 20px;
   }
 }
 

@@ -154,10 +154,15 @@ nav{
     background-color: rgba(0, 0, 0, 0.898);
     position: absolute;
     height: 80%;
-    width: 90%;
-    top: 12%;
-    left: 5%;
-    padding: 28px;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.alert_text_and_btn{
+    display: flex;
+    justify-content: space-between;
+    padding: 32px;
 }
 
 @media(max-width: 950px){

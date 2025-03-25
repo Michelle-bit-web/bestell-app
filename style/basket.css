@@ -72,7 +72,6 @@
 .div_basket_overlay{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     background-color: rgba(13, 22, 13, 0.893);
     height: 400px;
     width: 400px;
@@ -86,11 +85,25 @@
     padding: 0 24px;
 }
 
+.title_basket_overlay{
+    margin-bottom: 8px;
+}
+
 .basket_mobile{
     display: none;
     justify-content: center;
     height: 100px;
     width: 100%;
+}
+
+.rendered_content_mobile{
+    padding: 0 24px;
+}
+
+.div_trash_mobile{
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 24px;
 }
 
 .d_none{

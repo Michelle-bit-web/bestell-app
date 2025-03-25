@@ -74,13 +74,41 @@
         </div>
       </div>
     </section>
+    <div class="sticky_basket_mobile">
+      <div id="div_basket_overlay" class="div_basket_overlay d_none">
+        <div class="basket_overlay_top">
+          <h3 class="title_basket_overlay">Warenkorb</h3>
+          <button id="close_btn_overlay" class="close_btn_overlay" onclick="closeWindow('basket',event)">x</button>
+        </div>
+        <div class="div_trash_mobile">
+            <button class="trash_btn_mobile hover" onclick="deleteBasket()">
+              <img class="trash_icon_mobile hover" src="./assets/favicon/trash3.svg" alt="trash-button"/>
+            </button>
+        <div id="div_costs_mobile"></div>
+        </div>
+          <div id="div_basket_content_overlay" class="rendered_content_mobile"></div>
+          <div id="div_basket_prices_overlay" class="rendered_content_mobile"></div>
+            <div id="basket_content"></div>
+            <div id="div_basket_price_content"></div>
+          </div>
+        </div>
+      <div id="basket_mobile" class="basket_mobile">
+          <button id="basket_btn_mobile" class="basket_btn_mobile hover" onclick="openOverlay(event)">
+              <p>Warenkorb</p>
+              <br><i><p id="mobile_price_in_button" class="mobile_price_in_button">(€)</p></i>
+          </button>
+        </div>
+  </div>
     
     <div id="ordered_alert" class="div_ordered_alert d_none">
-        <div>
+        <div class="alert_text_and_btn">
+          <div class="alert_text">
+            <button id="close_btn_alert" class="close_btn_alert" onclick="closeWindow('alert',event)">x</button>
             <p>Vielen Dank für deine Bestellung!</p>
             <p>In kürze erhälst du einen Link per E-Mail, über den du die Lieferung verfolgen kannst.</p>
+          </div>
         </div>
-       <button id="close_btn_alert" class="close_btn_alert" onclick="closeWindow('alert',event)">x</button>
+       
     </div>
     <footer>
       <div class="footer_content">

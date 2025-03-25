@@ -105,7 +105,8 @@ h3{
   .content_text,
   .div_stars,
   .restaurant_info,
-  button{
+  button,
+  .alert_text_and_btn{
     font-size: 24px;
   }
   a{
@@ -127,7 +128,8 @@ h3{
   .content_text,
   .div_stars,
   .restaurant_info,
-  button{
+  button,
+  .alert_text_and_btn{
     font-size: 20px;
   }
   a{

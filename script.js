@@ -29,6 +29,8 @@ function checkForDuplicate(i) {
 function renderBasket() {
   document.getElementById("basket_content").innerHTML = "";
   document.getElementById("div_basket_price_content").innerHTML = "";
+  document.getElementById("div_basket_content_overlay").innerHTML = "";
+  document.getElementById("div_basket_prices_overlay").innerHTML = "";
   for (let b = 0; b < basket.length; b++) {
     getTemplatBaskets(b);
   }
@@ -37,12 +39,12 @@ function renderBasket() {
 
 function getTemplatBaskets(b) {
   document.getElementById("basket_content").innerHTML += templateBasket(b);
-  // document.getElementById("div_basket_overlay").innerHTML += templateBasket(b);
+  document.getElementById("div_basket_content_overlay").innerHTML += templateBasket(b);
 }
 
 function getTemplateTotalPrices() {
   document.getElementById("div_basket_price_content").innerHTML += templateTotalPrice();
-  // document.getElementById("div_basket_overlay").innerHTML += templateTotalPrice();
+  document.getElementById("div_basket_prices_overlay").innerHTML += templateTotalPrice();
 }
 
 function checkStatusDelivery() {
@@ -112,6 +114,7 @@ function getTotalCosts(){
    sum += el;
    }
   document.getElementById("sum").innerHTML = `${(sum)}`;
+  document.getElementById("mobile_price_in_button").innerHTML = `(${(sum)} €)`;
 }
 
 // function calculateSum(){
@@ -130,7 +133,8 @@ function deleteBasket() {
 function clearInnerHtml() {
   document.getElementById(`basket_content`).innerHTML = "";
   document.getElementById("div_basket_price_content").innerHTML = "";
-  // document.getElementById("div_basket_overlay").innerHTML = "";
+  document.getElementById("div_basket_content_overlay").innerHTML = "";
+  document.getElementById("div_basket_prices_overlay").innerHTML = "";
 }
 
 function clearArrays() {
