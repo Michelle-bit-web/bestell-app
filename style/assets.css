@@ -104,24 +104,6 @@ button:hover,
   gap: 16px;
 }
 
-@media (max-width: 800px) {
-  .trash_btn {
-    margin-bottom: 0;
-    width: 8px;
-    border-radius: 100%;
-    margin-bottom: 24px;
-  }
-  .trash_icon {
-    height: 20px;
-    width: 20px;
-  }
-  .div_trash {
-    display: flex;
-    justify-content: flex-end;
-    width: 100px;
-  }
-}
-
 @media (max-width: 700px) {
   .choosed_btn,
   .not_choosed_btn {
@@ -134,3 +116,10 @@ button:hover,
     width: 10%;
   }
 }
+
+@media (max-width: 450px) {
+    .choosed_btn,
+    .not_choosed_btn {
+      width: 100px;
+    }
+  }

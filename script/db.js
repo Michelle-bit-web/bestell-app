@@ -37,7 +37,7 @@ let dishes = [
         "amount": 1,
     },
     {
-        "name": "Hackfresse",
+        "name": "Hacke-voll",
         "image": "imgMain3",
         "dish": "main",
         "price": 9.50,
