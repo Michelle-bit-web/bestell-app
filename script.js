@@ -37,12 +37,12 @@ function renderBasket() {
 
 function getTemplatBaskets(b) {
   document.getElementById("basket_content").innerHTML += templateBasket(b);
-  document.getElementById("div_basket_overlay").innerHTML += templateBasket(b);
+  // document.getElementById("div_basket_overlay").innerHTML += templateBasket(b);
 }
 
 function getTemplateTotalPrices() {
   document.getElementById("div_basket_price_content").innerHTML += templateTotalPrice();
-  document.getElementById("div_basket_overlay").innerHTML += templateTotalPrice();
+  // document.getElementById("div_basket_overlay").innerHTML += templateTotalPrice();
 }
 
 function checkStatusDelivery() {
@@ -67,6 +67,13 @@ function changeAmount(a, basketIndex) {
   }
   renderBasket();
   checkStatusDelivery();
+  checkBasketContent();
+}
+
+function checkBasketContent(){
+  if(basket == ""){
+    deleteBasket();
+  }
 }
 
 function calculatePrices(){
@@ -123,7 +130,7 @@ function deleteBasket() {
 function clearInnerHtml() {
   document.getElementById(`basket_content`).innerHTML = "";
   document.getElementById("div_basket_price_content").innerHTML = "";
-  document.getElementById("div_basket_overlay").innerHTML = "";
+  // document.getElementById("div_basket_overlay").innerHTML = "";
 }
 
 function clearArrays() {
@@ -134,14 +141,14 @@ function clearArrays() {
 }
 
 function deliveryOrPickup(a) {
-  document.getElementById("sum").innerHTML = "";
+  if(basket.length > 0){
+    document.getElementById("sum").innerHTML = ""
+  }
   if (a < 0) {
     pickupStyle();
-    deliveryStatus = false;
   } 
   else if (a > 0) {
     deliveryStyle();
-    deliveryStatus = true;
   }
   checkStatusDelivery();
 }
@@ -150,12 +157,14 @@ function pickupStyle() {
   document.getElementById("delivery_btn").classList.add("not_choosed_btn");
   document.getElementById("pickup_btn").classList.add("choosed_btn");
   document.getElementById("pickup_btn").classList.remove("not_choosed_btn");
+  deliveryStatus = false;
 }
 
 function deliveryStyle() {
   document.getElementById("pickup_btn").classList.add("not_choosed_btn");
   document.getElementById("delivery_btn").classList.add("choosed_btn");
   document.getElementById("delivery_btn").classList.remove("not_choosed_btn");
+  deliveryStatus = true;
 }
 
 function order() {

@@ -54,13 +54,14 @@ button:hover,
 }
 
 .trash_icon{
-    width:90%;
+    width:80%;
 }
 
 .trash_btn{
     background-color: rgb(172, 255, 47);
     border: 5px;
-    width: 15%;
+    width: 60px;
+    height: 60px;
     border-radius: 100%;
     margin-bottom: 24px;
 }
