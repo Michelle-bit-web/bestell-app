@@ -22,9 +22,11 @@ function templateBasket(b) {
     <div>
         <div id="dish${b}" class="div_basket_content">
             <div class="added_dish_title">
-                <div id="amount${b}">${basket[b].amount}</div>
-                <div>x</div>
-                <h4>${basket[b].name}</h4><br>
+                <div class="align_amounts">
+                  <div id="amount${b}">${basket[b].amount}</div>
+                  <div>x</div>
+                </div>
+                <h4 class="dish_title_basket">${basket[b].name}</h4><br>
             </div>
             
            <div class="div_change_amount">

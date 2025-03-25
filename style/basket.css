@@ -17,8 +17,17 @@
 
 .added_dish_title{
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
+}
+
+.dish_title_basket{
+    text-align: end;
+    flex: 1;
+}
+
+.align_amounts{
+    display: flex;
 }
 
 .div_change_amount{
@@ -30,6 +39,7 @@
 
 .price_single_dish{
     flex:1;
+    text-align: end;
 }
 
 .div_basket_prices{

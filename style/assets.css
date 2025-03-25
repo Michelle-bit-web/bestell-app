@@ -1,133 +1,136 @@
-button{
-    background-color: rgb(24, 37, 15);
-    border: 2px solid  rgb(172, 255, 47);
-    width: 7%;
-    min-height: 30px;
-    border-radius: 10px;
-    color:  rgb(172, 255, 47);
-    font-family: 'sour-gummy-v1-latin-100';
-    font-size: 28px;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+button {
+  background-color: rgb(24, 37, 15);
+  border: 2px solid rgb(172, 255, 47);
+  width: 7%;
+  min-height: 30px;
+  border-radius: 10px;
+  color: rgb(172, 255, 47);
+  font-family: "sour-gummy-v1-latin-100";
+  font-size: 28px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 button:hover,
-.order_btn:hover{
-    background-color: rgb(58, 92, 34);
+.order_btn:hover {
+  background-color: rgb(58, 92, 34);
 }
 
-.hover:hover{
-    cursor: pointer;
+.hover:hover {
+  cursor: pointer;
 }
 
-.div_choose_btn{
-    display: flex;
-    width: fit-content;
-    background-color: rgb(154, 152, 152);
-    border-radius: 10px;
-    margin-top: 16px;
+.div_choose_btn {
+  display: flex;
+  width: fit-content;
+  background-color: rgb(154, 152, 152);
+  border-radius: 10px;
+  margin-top: 16px;
 }
 
-.choosed_btn{
-    width: 200px;
-    height: 40px;
-    border-radius: 10px;
-    background-color: rgb(172, 255, 47);
-    box-shadow:3px 0px rgba(0, 0, 0, 0.348);
-    color: rgb(0, 0, 0);
-    border: 0;
+.choosed_btn {
+  width: 200px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: rgb(172, 255, 47);
+  box-shadow: 3px 0px rgba(0, 0, 0, 0.348);
+  color: rgb(0, 0, 0);
+  border: 0;
 }
 
-.not_choosed_btn{
-    width: 150px;
-    border-radius: 10px;
-    background-color: transparent;
-    border: 0;
-    color: rgb(43, 43, 43);
+.not_choosed_btn {
+  width: 150px;
+  border-radius: 10px;
+  background-color: transparent;
+  border: 0;
+  color: rgb(43, 43, 43);
 }
 
-.div_trash{
-    display: flex;
-    justify-content: flex-end;
+.div_trash {
+  display: flex;
+  justify-content: flex-end;
 }
 
-.trash_icon{
-    width:80%;
+.trash_icon {
+  width: 80%;
 }
 
-.trash_btn{
-    background-color: rgb(172, 255, 47);
-    border: 5px;
-    width: 60px;
-    height: 60px;
-    border-radius: 100%;
-    margin: 24px 0;
+.trash_btn {
+  background-color: rgb(172, 255, 47);
+  border: 5px;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  margin: 24px 0;
 }
 
-.trash_btn:hover{
-    background-color: rgb(53, 80, 33);
+.trash_btn:hover {
+  background-color: rgb(53, 80, 33);
 }
 
-.change_amount_btn{
-    width: 30px;
-    height: 30px;
+.change_amount_btn {
+  width: 30px;
+  height: 30px;
 }
 
-.div_order_btn{
-    display: flex;
-    justify-content: center;
+.div_order_btn {
+  display: flex;
+  justify-content: center;
 }
 .order_btn,
-.basket_btn_mobile{
-    width: 90%;
+.basket_btn_mobile {
+  width: 90%;
 }
 
-.link_in_order_btn{
-    width: 100%;
+.link_in_order_btn {
+  width: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
-.close_btn_alert{
-    height: 50px;
-    width: 40px;
+.close_btn_alert {
+  height: 50px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.basket_btn_mobile {
+  display: flex;
+  gap: 16px;
+}
+
+@media (max-width: 800px) {
+  .trash_btn {
+    margin-bottom: 0;
+    width: 8px;
+    border-radius: 100%;
+    margin-bottom: 24px;
+  }
+  .trash_icon {
+    height: 20px;
+    width: 20px;
+  }
+  .div_trash {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
+    width: 100px;
+  }
 }
 
-.basket_btn_mobile{
-    display: flex;
-    gap: 16px;
-}
-
-@media(max-width: 800px){
-    .trash_btn{
-        margin-bottom: 0;
-        width: 8px;
-        border-radius: 100%;
-        margin-bottom: 24px;
-    }
-    .trash_icon{
-        height: 20px;
-        width: 20px;
-    }
-    .div_trash{
-        display: flex;
-        justify-content: flex-end;
-        width: 100px
-    }
-}
-
-@media(max-width: 700px){
-    .choosed_btn,
-    .not_choosed_btn{
-        width: 120px;
-    }
+@media (max-width: 700px) {
+  .choosed_btn,
+  .not_choosed_btn {
+    width: 120px;
+  }
 }
 
 @media (max-width: 500px) {
-    button{
-        width: 10%
-    }
+  button {
+    width: 10%;
+  }
 }

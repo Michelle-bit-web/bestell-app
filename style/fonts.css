@@ -76,18 +76,14 @@ h3{
 }
 
 .div_basket_content,
-.div_total_price{
+.div_total_price,
+.basket_content_placeholder{
   font-size: 20px;
 }
 
 .basket_title{
   text-align: center;
-}
-
-@media(max-width: 1200px){
-  .basket_title {
-      font-size: 32px;
-  }
+  font-size: 32px;
 }
 
 @media(max-width: 800px){
