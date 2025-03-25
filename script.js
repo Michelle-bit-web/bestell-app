@@ -72,27 +72,47 @@ function changeAmount(a, basketIndex) {
 function calculatePrices(){
     sumPrices = [];
     totalCost = [];
-    for (let i = 0; i < basket.length; i++) {
-        sumPrices.push({
-            "name": basket[i].name,
-            "price": (basket[i].price * basket[i].amount),
-            "amount": basket[i].amount,
-        });
-        totalCost.push(sumPrices[i].price);
-        document.getElementById(`calc_price_single_dish${i}`).innerHTML = `${sumPrices[i].price} €`
-    }
-   console.log('calculator is running');
-   console.log(deliveryCost);
-   totalCost.push(deliveryCost[0]);
-   console.log(totalCost);
-   let sum = 0;
-   for (const el of totalCost){
-    sum += el;
-   } console.log(sum)
-   document.getElementById("sum").innerHTML = `${(sum)}`;
-  
-  
+    getSumSingleDishes();
+    getSubtotalCosts();
+    getTotalCosts();
 }
+
+function getSumSingleDishes(){
+  for (let i = 0; i < basket.length; i++) {
+    sumPrices.push({
+        "price": (basket[i].price * basket[i].amount),
+        "amount": basket[i].amount,
+    });
+    totalCost.push(sumPrices[i].price);
+    document.getElementById(`calc_price_single_dish${i}`).innerHTML = `${sumPrices[i].price} €`
+}
+}
+
+function getSubtotalCosts(){
+  // calculateSum();
+  let sum = 0;
+   for (const el of totalCost){
+   sum += el;
+   }
+  document.getElementById("subtotal").innerHTML = `${(sum)}`;
+}
+
+function getTotalCosts(){
+  totalCost.push(deliveryCost[0]);
+  // calculateSum();
+  let sum = 0;
+   for (const el of totalCost){
+   sum += el;
+   }
+  document.getElementById("sum").innerHTML = `${(sum)}`;
+}
+
+// function calculateSum(){
+//   let sum = 0;
+//    for (const el of totalCost){
+//    sum += el;
+//    }
+// }
 
 function deleteBasket() {
   clearInnerHtml();
