@@ -63,7 +63,7 @@ button:hover,
     width: 60px;
     height: 60px;
     border-radius: 100%;
-    margin-bottom: 24px;
+    margin: 24px 0;
 }
 
 .trash_btn:hover{
@@ -104,7 +104,7 @@ button:hover,
 @media(max-width: 800px){
     .trash_btn{
         margin-bottom: 0;
-        width: 10px;
+        width: 8px;
         border-radius: 100%;
         margin-bottom: 24px;
     }
@@ -116,5 +116,18 @@ button:hover,
         display: flex;
         justify-content: flex-end;
         width: 100px
+    }
+}
+
+@media(max-width: 700px){
+    .choosed_btn,
+    .not_choosed_btn{
+        width: 120px;
+    }
+}
+
+@media (max-width: 500px) {
+    button{
+        width: 10%
     }
 }

@@ -11,8 +11,8 @@ function templateDishes(i) {
                 <h3>${dishes[i].name}</h3>
                 <button id="add_to_basket" class="add_to_basket hover" onclick="addToBasket(${i})">+</button>
             </div>
-            <p>${dishes[i].content}</p>
-            <p>${dishes[i].price} €</p>
+            <p class="content_text">${dishes[i].content}</p>
+            <p class="content_text">${dishes[i].price} €</p>
         </div>
     `;
 }
