@@ -49,7 +49,7 @@ function templateTotalPrice() {
         <div class="div_current_sum">
             <p>Zwischensumme</p>
             <div class="div_basket_prices">
-             <p id="subtotal"></p>
+             <p id="subtotal" class="subtotal"></p>
              <span>€</span>
             </div>
         </div>
@@ -60,7 +60,7 @@ function templateTotalPrice() {
         <div class="div_total_sum">
              <b><p>Gesamt</p></b>
             <div class="div_basket_prices">
-             <p id="sum"></p>
+             <p id="sum" class="sum"></p>
              <span>€</span>
             </div>
         </div>

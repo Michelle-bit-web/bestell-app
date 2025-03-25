@@ -93,7 +93,7 @@ function getSumSingleDishes(){
         "amount": basket[i].amount,
     });
     totalCost.push(sumPrices[i].price);
-    document.getElementById(`calc_price_single_dish${i}`).innerHTML = `${sumPrices[i].price} €`
+    document.getElementById(`calc_price_single_dish${i}`).innerHTML = `${TwoDecimals(sumPrices[i].price)} €`
 }
 }
 
@@ -103,7 +103,7 @@ function getSubtotalCosts(){
    for (const el of totalCost){
    sum += el;
    }
-  document.getElementById("subtotal").innerHTML = `${(sum)}`;
+  document.getElementById("subtotal").innerHTML = `${TwoDecimals(sum)}`;
 }
 
 function getTotalCosts(){
@@ -113,8 +113,8 @@ function getTotalCosts(){
    for (const el of totalCost){
    sum += el;
    }
-  document.getElementById("sum").innerHTML = `${(sum)}`;
-  document.getElementById("mobile_price_in_button").innerHTML = `(${(sum)} €)`;
+  document.getElementById("sum").innerHTML = `${TwoDecimals(sum)}`;
+  document.getElementById("mobile_price_in_button").innerHTML = `(${TwoDecimals(sum)} €)`;
 }
 
 // function calculateSum(){
@@ -133,8 +133,8 @@ function deleteBasket() {
 function clearInnerHtml() {
   document.getElementById(`basket_content`).innerHTML = "";
   document.getElementById("div_basket_price_content").innerHTML = "";
-  document.getElementById("div_basket_content_overlay").innerHTML = "";
-  document.getElementById("div_basket_prices_overlay").innerHTML = "";
+  // document.getElementById("div_basket_content_overlay").innerHTML = "";
+  // document.getElementById("div_basket_prices_overlay").innerHTML = "";
 }
 
 function clearArrays() {
@@ -155,6 +155,10 @@ function deliveryOrPickup(a) {
     deliveryStyle();
   }
   checkStatusDelivery();
+}
+
+function TwoDecimals(x){
+  return Number.parseFloat(x).toFixed(2);
 }
 
 function pickupStyle() {
