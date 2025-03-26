@@ -35,6 +35,9 @@ function templateBasket(b) {
              </div>
              <p id="calc_price_single_dish${b}" class="price_single_dish">${basket[b].price} €</p>
             </div>
+            <button class="delete_dish_btn hover" onclick="deleteDish(${b})">
+              <img class="trash_icon_dishes hover" src="./assets/favicon/trash3.svg" alt="trash-button"/>
+            </button>
         </div>
     </div>
 `;
@@ -88,6 +91,9 @@ function templateBasketMobile(b) {
              </div>
              <p id="calc_price_single_dish_mobile${b}" class="price_single_dish">${basket[b].price} €</p>
            </div>
+           <button class="delete_dish_btn hover" onclick="deleteDish(${b})">
+              <img class="trash_icon_dishes hover" src="./assets/favicon/trash3.svg" alt="trash-button"/>
+            </button>
         </div>
     </div>
 `;

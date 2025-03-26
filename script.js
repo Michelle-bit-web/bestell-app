@@ -10,7 +10,6 @@ function getDishImage(i) {
 }
 
 function addToBasket(i) {
-  // document.getElementById("basket_content").innerHTML = "";
   checkForDuplicate(i);
   renderBasket();
   checkStatusDelivery();
@@ -22,8 +21,7 @@ function checkForDuplicate(i) {
   if (search == undefined) {
     basket.push(dishes[i]);
   } else {
-    index = basket.findIndex((item) => item.name == search);
-    basket[index].amount += 1;
+    search.amount += 1;
   }
 }
 
@@ -102,7 +100,6 @@ function getSumSingleDishes(){
 }
 
 function getSubtotalCosts(){
-  // calculateSum();
   let sum = 0;
    for (const el of totalCost){
    sum += el;
@@ -113,7 +110,6 @@ function getSubtotalCosts(){
 
 function getTotalCosts(){
   totalCost.push(deliveryCost[0]);
-  // calculateSum();
   let sum = 0;
    for (const el of totalCost){
    sum += el;
@@ -123,18 +119,18 @@ function getTotalCosts(){
   document.getElementById("mobile_price_in_button").innerHTML = `(${TwoDecimals(sum)} €)`;
 }
 
-// function calculateSum(){
-//   let sum = 0;
-//    for (const el of totalCost){
-//    sum += el;
-//    }
-// }
+function deleteDish(basketIndex){
+  basket.splice(basket[basketIndex], 1);
+  renderBasket();
+  checkStatusDelivery();
+  checkBasketContent();
+}
 
 function deleteBasket() {
   clearInnerHtml();
   clearArrays();
+  resetAmount();
   document.getElementById("basket_content_placeholder").classList.remove("d_none");
-  // renderBasket();
 }
 
 function clearInnerHtml() {
@@ -151,6 +147,12 @@ function clearArrays() {
   deliveryCost = [];
   savedPrice = [];
   sumPrices = [];
+}
+
+function resetAmount(){
+  for (let i = 0; i < dishes.length; i++) {
+    dishes[i].amount = 1;
+  }
 }
 
 function deliveryOrPickup(a) {

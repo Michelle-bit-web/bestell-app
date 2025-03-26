@@ -3,12 +3,14 @@
     height: auto;
     width: 350px;
     padding: 8px 24px;
-    position: sticky;
     top:0px;
 }
 
 .sticky_basket{
-    position: sticky;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    width: 330px;
 }
 
 #basket_content{
@@ -18,6 +20,7 @@
 }
 
 .div_basket_content{
+    position: relative;
     background-color: rgba(255, 255, 255, 0.103);
     border-radius: 10px;
     margin-bottom: 8px;
