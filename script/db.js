@@ -73,7 +73,7 @@ let dishes = [
         "amount": 1,
     },
     {
-        "name": "Basilikum-Zitrone-Limonade",
+        "name": "Basilikum-Zitronen-Limonade",
         "image": "imgDrink0",
         "dish": "drink",
         "price": 1.20,

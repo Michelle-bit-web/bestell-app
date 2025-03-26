@@ -83,6 +83,7 @@ h3{
 .basket_title{
   text-align: center;
   font-size: 32px;
+  margin: 16px 0;
 }
 
 @media(max-width: 940px){
