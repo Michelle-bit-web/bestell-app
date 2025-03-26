@@ -12,7 +12,7 @@ function templateDishes(i) {
                 <button id="add_to_basket" class="add_to_basket hover" onclick="addToBasket(${i})">+</button>
             </div>
             <p class="content_text">${dishes[i].content}</p>
-            <p class="content_text">${dishes[i].price} €</p>
+            <p class="content_text">${TwoDecimals(dishes[i].price)} €</p>
         </div>
     `;
 }

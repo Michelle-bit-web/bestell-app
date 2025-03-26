@@ -167,11 +167,15 @@ function deliveryOrPickup(a) {
   else if (a > 0) {
     deliveryStyle();
   }
-  checkStatusDelivery();
+  if(document.getElementById('basket_content').innerHTML == ""){
+    return
+  } else {
+    checkStatusDelivery();
+  }
 }
 
 function TwoDecimals(x){
-  return Number.parseFloat(x).toFixed(2);
+  return Number.parseFloat(x).toFixed(2).replace(".", ",");
 }
 
 function pickupStyle() {

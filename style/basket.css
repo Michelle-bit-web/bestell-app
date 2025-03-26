@@ -24,18 +24,21 @@
     background-color: rgba(255, 255, 255, 0.103);
     border-radius: 10px;
     margin-bottom: 8px;
-    padding: 16px;
+    padding: 20px;
 }
 
 .added_dish_title{
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    margin-top: 16px;
 }
 
 .dish_title_basket{
     text-align: end;
     flex: 1;
+    margin-top: 20px;
+    margin-bottom: 8px;
 }
 
 .align_amounts{
@@ -51,6 +54,8 @@
 .price_single_dish{
     flex:1;
     text-align: end;
+    margin-top: 8px;
+    margin-bottom: 8px;
 }
 
 .div_basket_prices{
@@ -62,6 +67,12 @@
 
 .div_total_price{
     text-align: end;
+    padding: 20px;
+}
+
+.div_basket_price_content{
+   
+   width: 200px
 }
 
 .div_plus_minus{
@@ -134,11 +145,11 @@
 
 @media(max-width: 940px){
     .div_basket{   
-        width: 300px;
+        padding: 8px 16px;
     }
 }
 
-@media(max-width: 745px){
+@media(max-width: 770px){
     .div_basket{
         display: none;
     }

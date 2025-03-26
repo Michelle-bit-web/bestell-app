@@ -1,13 +1,8 @@
 let deliveryStatus = true;
-
 let basket = [];
-
 let totalCost = [];
-
 let deliveryCost = [];
-
 let sumPrices = [];
-
 let dishes = [
     {
         "name": "Pizza Sandwich",

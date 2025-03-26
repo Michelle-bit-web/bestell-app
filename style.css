@@ -1,10 +1,6 @@
 body{
     background-color: black;
 }
-/* header{
-    top:0;
-    position: sticky;
-} */
 
 header,
 footer{
@@ -50,22 +46,20 @@ nav{
     gap: 8px;
 }
 
-/* #navbar{
-    transition: all 1s ease-in-out;
-} */
-
 .burger_menu{
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 8px;
     margin-left: 16px;
+    cursor: pointer;
 }
 
 .burger_menu_icon{
     width: 32px;
     height: 2px;
     background-color: rgb(255, 255, 255);
+    cursor: pointer;
 }
 
 .content_wrapper{
@@ -109,8 +103,8 @@ nav{
 
 .div_content{
     background-color:rgba(11, 40, 11, 0.678);
-    width: calc(100% - 350px);
-    max-width: calc(1920px - 350px);
+    width: calc(100% - 355px);
+    max-width: calc(1920px - 355px);
     padding: 8px 24px;
 }
 
@@ -165,6 +159,12 @@ nav{
     padding: 32px;
 }
 
+@media(max-width: 940px){
+    .div_content{   
+        padding: 8px 16px;
+    }
+}
+
 @media(max-width: 950px){
     .div_restaurant {
         height: 200px;
@@ -178,7 +178,7 @@ nav{
     }
 }
 
-@media(max-width: 745px){
+@media(max-width: 770px){
     .div_content {
         width: 95%;
         max-width: 1920px;
