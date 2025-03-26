@@ -65,7 +65,7 @@ function changeAmount(a, basketIndex) {
     basket[basketIndex].amount += 1;
   } else if (a < 0 && basket[basketIndex].amount > 1) {
     basket[basketIndex].amount -= 1;
-  } else {
+  } else{
     basket.splice(basket[basketIndex], 1);
   }
   renderBasket();
@@ -96,7 +96,7 @@ function getSumSingleDishes(){
     totalCost.push(sumPrices[i].price);
     document.getElementById(`calc_price_single_dish${i}`).innerHTML = `${TwoDecimals(sumPrices[i].price)} €`
     document.getElementById(`calc_price_single_dish_mobile${i}`).innerHTML = `${TwoDecimals(sumPrices[i].price)} €`
-}
+  }
 }
 
 function getSubtotalCosts(){
@@ -120,10 +120,12 @@ function getTotalCosts(){
 }
 
 function deleteDish(basketIndex){
-  basket.splice(basket[basketIndex], 1);
-  renderBasket();
-  checkStatusDelivery();
-  checkBasketContent();
+  let indexForReset = dishes.findIndex((item) => item.name == basket[basketIndex].name);
+ dishes[indexForReset].amount = 1;
+ basket.splice(basketIndex, 1);
+ renderBasket();
+ checkStatusDelivery();
+ checkBasketContent();
 }
 
 function deleteBasket() {
