@@ -23,6 +23,13 @@ a:hover {
   color: greenyellow;
 }
 
+@media (hover: hover){
+  a:hover {
+    cursor: pointer;
+    color: greenyellow;
+  }
+}
+
 .side_links{
   font-size: 24px;
 }
