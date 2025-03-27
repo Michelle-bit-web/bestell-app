@@ -131,6 +131,27 @@ button:hover,
   width: 30px
 }
 
+html {
+  --scrollbarBG: rgb(53, 80, 33);
+  --thumbBG: rgb(172, 255, 47);
+}
+body::-webkit-scrollbar {
+  width: 11px;
+}
+body {
+  scrollbar-width: thin;
+  scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+}
+body::-webkit-scrollbar-track {
+  background: var(--scrollbarBG);
+}
+body::-webkit-scrollbar-thumb {
+  background-color: var(--thumbBG) ;
+  border-radius: 6px;
+  border: 3px solid var(--scrollbarBG);
+}
+
+
 @media (max-width: 700px) {
   .choosed_btn,
   .not_choosed_btn {

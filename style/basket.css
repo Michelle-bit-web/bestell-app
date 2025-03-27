@@ -17,6 +17,7 @@
     height: 500px;
     overflow: auto;
     scrollbar-width: thin;
+    scrollbar-color: rgb(172, 255, 47);
 }
 
 .div_basket_content{
