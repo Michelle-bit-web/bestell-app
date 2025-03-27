@@ -1,3 +1,11 @@
+function init(){
+  renderContent();
+  // getFromLocalStorage();
+  renderBasket();
+  checkStatusDelivery();
+  calculatePrices(); 
+}
+
 function renderContent() {
   for (let i = 0; i < dishes.length; i++) {
     document.getElementById(`${dishes[i].dish}_dishes`).innerHTML += templateDishes(i);
@@ -14,6 +22,7 @@ function addToBasket(i) {
   renderBasket();
   checkStatusDelivery();
   document.getElementById("basket_content_placeholder").classList.add("d_none");
+  saveToLocalStorage();
 }
 
 function checkForDuplicate(i) {
@@ -71,6 +80,7 @@ function changeAmount(a, basketIndex) {
   renderBasket();
   checkStatusDelivery();
   checkBasketContent();
+  saveToLocalStorage();
 }
 
 function checkBasketContent(){
@@ -85,6 +95,7 @@ function calculatePrices(){
     getSumSingleDishes();
     getSubtotalCosts();
     getTotalCosts();
+    saveToLocalStorage();
 }
 
 function getSumSingleDishes(){
@@ -133,6 +144,7 @@ function deleteBasket() {
   clearArrays();
   resetAmount();
   document.getElementById("basket_content_placeholder").classList.remove("d_none");
+  saveToLocalStorage();
 }
 
 function clearInnerHtml() {
