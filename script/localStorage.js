@@ -12,7 +12,6 @@ function getFromLocalStorage() {
     if(y !== null){
     Object.assign(array, y);
     }
-    else{renderContent()}
   }
 
   function saveToLocalStorage() {
