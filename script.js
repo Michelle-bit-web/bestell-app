@@ -1,6 +1,6 @@
 function init(){
   renderContent();
-  // getFromLocalStorage();
+  getFromLocalStorage();
   renderBasket();
   checkStatusDelivery();
   calculatePrices(); 
