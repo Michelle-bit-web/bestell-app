@@ -26,7 +26,10 @@ Live demo: [Try it](https://michelle-bit-web.github.io/bestell-app)
 
 ## 📸 Screenshots
 
+Mobile preview:
 ![App Board](./assets/img/preview-mobile.png)
+
+Desktop preview:
 ![App Board](./assets/img/preview-desktop.png)
 
 ## ⚙️ Technologies Used
