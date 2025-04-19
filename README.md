@@ -1,4 +1,4 @@
-![Game Logo](./assets/logo/bestellapp-logo.png)
+![Game Logo](./assets/logo/bestellapp-logo.PNG)
 
 # 🥙 Bestell App - Order, Pick-Up & Delivery
 
