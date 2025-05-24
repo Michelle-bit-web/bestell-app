@@ -14,7 +14,7 @@ function renderContent() {
 }
 
 function getDishImage(i) {
-  document.getElementById(`dish_img${i}`).style.backgroundImage = `url(./assets/img/${dishes[i].image}.png)`;
+  document.getElementById(`dish_img${i}`).style.backgroundImage = `url(assets/img/${dishes[i].image}.png)`;
 }
 
 function addToBasket(i) {
