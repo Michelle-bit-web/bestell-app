@@ -40,7 +40,8 @@ Desktop preview:
 
 ## 🫳 How to Use
 
-
+- clone this repository and open it to your browser
+- no installations required
 
 ## 🤝 Contributing
 
