@@ -49,13 +49,11 @@ Ideas and feedback are welcome! Feel free to open issues or submit pull requests
 
 ##💡To-Dos / Ideas
 
-- [ ] 📍 Real-Time Tracking – Track your order status in real time.
-
-- [ ] 💳 Multiple Payment Options – Pay via credit card, PayPal, or cash on delivery.
-
-- [ ] 🧾 Order History – View past orders and reorder with ease.
-
-- [ ] 💡 Implement Backend.
-   
-
-
+I am working on a rebuild of this project: [New repository](https://github.com/Michelle-bit-web/bestellApp)
+<br>
+This will include:
+- Rebuild with React Vite.
+- GSAP animations for a great user experience.
+- Login and payment options.
+- Implementation of a backend with Django.
+- Order History – View past orders and reorder with ease.
