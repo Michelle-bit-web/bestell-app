@@ -56,8 +56,6 @@ Ideas and feedback are welcome! Feel free to open issues or submit pull requests
 - [ ] 🧾 Order History – View past orders and reorder with ease.
 
 - [ ] 💡 Implement Backend.
-
-- [ ] 💡 Improve game logic.
    
 
 
